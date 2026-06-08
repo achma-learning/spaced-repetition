@@ -1,0 +1,54 @@
+
+
+
+
+
+The Idea: Add a small table on your AIO (All-In-One) or Stats sheet that counts how many reviews are scheduled for the next 7 days.
+
+Why: If you see 50 reviews scheduled for Friday, you can study some of them early on Thursday so you don't get overwhelmed.
+
+
+The Improvement: Add a "Priority" column (High/Medium/Low).
+
+The Change: Modify the Interval formula so that "High Yield" topics (like ECG interpretation or Antibiotics) have slightly shorter intervals (so you see them more often) than "Low Yield" topics (like Rare Genetic Syndromes)
+
+3. Mobile "Quick-Update" Form
+Updating a Google Sheet on a phone during hospital rounds or on the bus is a nightmare.
+
+The Idea: Create a Google Form linked to this sheet.
+
+The Workflow: 1. The Form has two fields: Topic Name (Dropdown) and Self-Rating (0-5). 2. When you submit the form, a script automatically finds that topic in your S8 sheet and updates the date and mastery for you.
+
+Why: You can finish a review and update your tracker in 3 taps on your phone without ever opening the actual spreadsheet.
+
+4. Color-Coded Calendar Events (Visual Learning)
+Currently, all events are labeled 📚 SRS:. You can use the script to color-code the events based on the Subject.
+
+The Tweak: In your CalendarSync.js, add a logic to check the Subject (Column A).
+
+The Result: * Traumatologie events = Red
+
+Génétique events = Blue
+
+Hématologie events = Green
+
+Why: When you look at your "Month View" on your phone, you instantly see which modules are dominating your week.
+
+🛠️ Small Technical "Pro-Fix" for your Script
+If you want to implement the Partner/Shared Sync we discussed earlier into this specific CalendarSync.js version, look at your syncRowToCalendar function and add the guest option:
+
+JavaScript
+// Around line 135 in your Production Script
+const eventOptions = {
+  description: 'Subject: ' + subject + '\nTopic: ' + topic,
+  guests: 'your-partner@gmail.com', // ADD THIS LINE
+  sendInvites: false                // PREVENTS SPAMMING THEM WITH EMAILS
+};
+
+if (existingEventId) {
+  // Update logic...
+} else {
+  const newEvent = calendar.createAllDayEvent(eventTitle, nextReviewDate, eventOptions);
+  // Store ID logic...
+}
+What do you think? Would you like the specific formulas for the "Workload Prediction" table (Idea #1)?
