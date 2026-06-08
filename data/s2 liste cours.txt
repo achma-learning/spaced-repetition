@@ -1,0 +1,124 @@
+S2
+- Anatomie II
+  - Anatomie de la cavité abdominale
+  - Anatomie de la paroi abdominale
+  - Anatomie de l'estomac
+  - Anatomie du colon
+  - Anatomie du rectum
+  - Anatomie du jéjunum et de l'iléon
+  - Anatomie de la rate
+  - Anatomie du duodénum
+  - Anatomie du pancréas
+  - Anatomie du foie
+  - Anatomie du rein
+  - Les voies excrétrices urinaires
+  - Anatomie de l'appareil génital masculin
+  - Anatomie des glandes surrénales
+  - Anatomie du sein
+  - Anatomie de l'utérus
+  - Anatomie des annexes
+  - Anatomie du vagin
+  - Anatomie de la vulve
+  - L'aorte
+  - Veine cave inférieure
+  - Les veines iliaques
+
+- Histologie-Embryologie I
+  - Histologie
+    - Tissu épithélial
+    - Tissu conjonctif ordinaire
+    - Tissu cartilagineux
+    - Tissu osseux
+    - Tissu musculaire
+    - Tissu nerveux
+    - Appareil circulatoire
+  - Embryologie I
+    - Première semaine du développement embryonnaire
+    - Deuxième semaine du développement embryonnaire
+    - Troisième semaine du développement embryonnaire
+    - Quatrième semaine du développement embryonnaire
+    - Placenta et membranes amniotiques
+    - Grossesse gémellaire
+  - Biologie de la reproduction
+    - La spermatogenèse humaine
+    - L'ovogenèse et la folliculogenèse
+    - La fécondation
+
+- Biophysique
+  - Atomes (rappel)
+  - Phénomènes de radioactivité
+  - Cinétique des transformations radioactives
+  - Interaction des rayonnements ionisants avec la matière
+  - Les détecteurs des rayonnements ionisants
+  - Biophysique de la vision
+  - Biophysique de l'audition
+  - Grandeurs extensives
+  - Forces et grandeurs dérivées
+  - États gazeux
+  - Les solutions
+  - Mouvement de convection d'un fluide
+  - Biophysique de la circulation sanguine
+  - Mouvement de migration à l'intérieur des fluides
+  - Potentiel de membrane
+  - Phénomènes osmotiques
+  - L'équilibre acido-basique
+  - Activité électrique du cœur (électrocardiographie)
+  - Bases physiques de la radiographie
+  - Bases physiques du scanner
+  - Bases physiques de l'IRM
+  - Bases physiques des ultrasons
+  - Échodoppler
+  - Effets biologiques des rayonnements ionisants
+  - Radiopathologie
+  - Radioprotection
+
+- Histoire et psycho-social
+  - Histoire de la médecine
+    - Histoire de la médecine arabo-musulmane
+    - Histoire de la chirurgie
+    - Histoire des hôpitaux
+    - Histoire de la médecine
+    - La médecine primitive magique
+    - La médecine archaïque
+    - La médecine grecque hippocratique
+    - La médecine byzantine
+    - La médecine arabe
+    - Médecine du Moyen Âge
+    - Humanisme et phase pré-moderne
+    - Médecine moderne et post-moderne
+  - Psycho-social
+    - Psychologie générale et médicale
+    - L'équipe médicale
+    - Relation médecin-malade
+    - Le malade et sa maladie
+    - Aspect psychologique des maladies graves et annonce diagnostique
+    - Aspect psychologique de la consultation et de l'hôpital
+    - Aspect psychologique du médicament
+    - Psychologie de l'adolescent
+    - Psychologie du sujet âgé
+    - Stress et santé
+    - Le développement psychomoteur de l'enfant et du nourrisson
+    - Le développement cognitif chez l'enfant
+    - Le développement psychoaffectif de l'enfant
+    - Le développement de la personnalité
+    - Psychologie de la mémoire
+    - Psychologie du comportement
+    - Les émotions
+    - Sociologie de la santé
+    - Déterminants sociaux de la santé
+    - Les approches
+    - Maladie chronique
+    - Psychologie sociale de la maladie
+  - Techniques de communication
+    - Les bases théoriques de la communication
+    - La communication interpersonnelle (CIP)
+    - Approche clinique centrée sur le patient
+    - Éducation thérapeutique
+    - Entretien motivationnel
+    - Annonce d'une mauvaise nouvelle
+    - Gestion des émotions
+    - Entretiens triangulaires
+    - Communication en équipe
+    - Communication scientifique
+    - L'article original
+    - Communication orale

@@ -1,0 +1,176 @@
+S7
+- Maladies de l'enfant
+  - Pédiatrie
+    - Hématuries
+    - Glomérulonéphrites aiguës chez l'enfant
+    - Protéinurie
+    - Syndrome néphrotique
+    - Purpura rhumatoïde
+    - Arthralgies et arthrite chez l'enfant
+    - Infections urinaires chez l'enfant
+    - Énurésie
+    - Asthme de l'enfant et du nourrisson
+    - Pleurésie de l'enfant
+    - Infections respiratoires aiguës chez l'enfant
+    - Coqueluche
+    - Vomissements chez l'enfant
+    - Diarrhée chez l'enfant
+    - Diarrhée aiguë et déshydratation chez l'enfant
+    - Alimentation et besoins nutritionnels chez l'enfant
+    - Carences nutritionnelles chez l'enfant
+    - Le diabète chez l'enfant
+    - Retard staturo-pondéral
+    - Anémie chez l'enfant
+    - Cancer de l'enfant et leucémie aiguë
+    - Syndrome hémorragique chez l'enfant (troubles de l'hémostase)
+    - Dyspnée aiguë chez le nourrisson
+    - Douleurs abdominales chez l'enfant
+    - Développement psychomoteur
+    - Tuberculose chez l'enfant
+    - Fièvre de l'enfant
+    - Fièvre éruptive chez l'enfant
+    - Infections neuroméningées de l'enfant
+    - Déficit immunitaire
+  - Néonatologie
+    - Réanimation du nouveau-né
+    - Asphyxie périnatale (APN)
+    - Infections néonatales
+    - Détresses respiratoires néonatales
+    - Ictères néonataux
+    - RCIU
+    - Convulsions néonatales
+    - Prématurité
+    - Cardiopathies congénitales
+    - Cyanose néonatale
+    - Insuffisance cardiaque du nourrisson
+  - Chirurgie pédiatrique
+    - Malformations congénitales
+    - Atrésie de l'œsophage
+    - Hernie diaphragmatique
+    - Occlusion néonatale
+    - Maladie de Hirschsprung
+    - Uropathies de l'enfant
+    - Invagination intestinale
+    - Malformation anorectale
+    - Proctologie pédiatrique
+    - Torsion du cordon spermatique
+    - Pathologie du canal péritonéo-vaginal
+    - Anomalie de migration et de position testiculaire
+    - Sténose hypertrophique du pylore
+    - Les particularités des fractures chez l'enfant
+    - Infections ostéo-articulaires de l'enfant
+    - Les boiteries de l'enfant
+    - Déformation rachidienne
+    - Maladie luxante de la hanche
+    - Pied du nouveau-né
+    - Tumeurs osseuses malignes de l'enfant
+
+- Dermatologie - Endocrinologie
+  - Dermatologie
+    - Écoulement urétéral
+    - Ulcération génitale
+    - Syphilis
+    - Manifestations cutanées du VIH
+    - Toxidermie médicamenteuse
+    - Urticaire
+    - Acné
+    - Psoriasis
+    - Les cancers cutanés
+    - Mélanomes
+    - Dermatoses bulleuses
+    - Érythème noueux
+    - Prurit
+    - Tuberculose cutanée
+    - La lèpre
+    - Infections cutanées à HSV
+    - Infections cutanées à HPV (papillomavirus)
+    - Molluscum contagiosum
+    - Mycoses superficielles
+    - Infections cutanées à virus varicelle-zona
+    - Dermatoses bactériennes
+    - Les ectoparasitoses
+    - Eczémas
+  - Endocrinologie
+    - Pathologie thyroïdienne
+    - Nodule thyroïdien
+    - Nutrition clinique
+    - Adénome hypophysaire
+    - Syndrome de Cushing
+    - L'obésité chez l'adulte
+    - Insuffisance surrénalienne
+    - Diabète : définition et classification
+    - Diabète type 1
+    - Diabète type 2
+    - Diabète cortico-induit
+
+- Neurologie - Neurochirurgie
+  - Neurologie
+    - Cours introductif de neurologie
+    - Sclérose latérale amyotrophique
+    - Neuropathies périphériques
+    - Syndrome myasthénique
+    - Myopathies
+    - Neurosyphilis
+    - Ataxie cérébelleuse
+    - Les AVC ischémiques
+    - Thrombophlébite cérébrale
+    - Maladie de Parkinson
+    - Sclérose en plaques (SEP)
+    - Neuro-Behçet
+    - Épilepsie
+    - Démences
+    - Troubles du sommeil
+    - Céphalées
+  - Neurochirurgie
+    - Spina bifida
+    - Hydrocéphalie
+    - Malformation de la charnière cranio-cervicale
+    - Syndrome de compression médullaire
+    - Syndrome de la queue de cheval
+    - Sciatique par hernie discale
+    - Hématomes intracérébraux
+    - L'hémorragie spontanée des méninges
+    - Suppuration intracrânienne
+    - Hydatidose cérébrale et vertébro-médullaire
+    - Tuberculose du système nerveux
+    - Les lésions sellaires et supra-sellaires
+    - Craniosténoses
+    - Traumatismes du rachis dorso-lombaire
+    - Traumatismes crânio-encéphaliques
+    - Traumatismes du rachis cervical
+    - Gliomes hémisphériques
+    - Méningiomes intracrâniens
+    - Métastases cérébrales
+    - Tumeurs de la fosse cérébrale postérieure (FCP)
+
+- Hématologie - Oncologie
+  - Hématologie
+    - Anémie par carence en fer
+    - Anémie mégaloblastique
+    - Aplasie médullaire
+    - Anémie par déficit en G6PD
+    - Sphérocytose héréditaire
+    - Drépanocytose
+    - Thalassémie
+    - Leucémie aiguë
+    - Leucémie myéloïde chronique
+    - Leucémie lymphoïde chronique (LLC)
+    - Syndromes myéloprolifératifs Philadelphie négatifs
+    - Lymphome malin non hodgkinien (LMNH)
+    - Maladie de Hodgkin
+    - Myélome multiple
+    - Purpura thrombopénique immunologique (PTI)
+    - Hémophilie
+    - Transfusion sanguine
+    - Urgences hématologiques 1 : syndrome de leucostase et CIVD
+    - Urgences hématologiques 2 : syndrome de lyse tumorale et neutropénie fébrile
+  - Oncologie
+    - Épidémiologie des cancers
+    - Diagnostic, bilan d'extension et classification des cancers
+    - Douleur et cancer
+    - Urgences oncologiques
+    - Radiothérapie
+    - Chimiothérapie
+    - Hormonothérapie
+    - Thérapies ciblées
+    - Immunothérapie

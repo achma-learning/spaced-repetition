@@ -1,0 +1,109 @@
+S6
+- Pathologie respiratoire
+  - Médecine
+    - Pneumopathies interstitielles diffuses (PID)
+    - La sarcoïdose
+    - Pneumoconioses
+    - Pneumopathie d'hypersensibilité (alvéolite allergique extrinsèque)
+    - Les infections respiratoires basses communautaires (IRABC)
+    - BPCO
+    - Asthme
+    - Cancer bronchique
+    - Infections respiratoires au cours du VIH
+    - Pathologie du tabac
+    - Mycoses respiratoires (aspergillose)
+    - Hypertension pulmonaire (HTP)
+    - Syndrome d'apnée obstructive du sommeil
+    - Les pleurésies
+    - Abcès pulmonaire
+    - Dilatation des bronches (DDB)
+    - Kyste hydatique pulmonaire (KHP)
+    - Insuffisance respiratoire aiguë
+    - Introduction à la tuberculose
+    - Primo-infection tuberculeuse
+    - Tuberculose pulmonaire commune
+    - Tuberculoses aiguës
+    - Tumeurs médiastinales
+  - Chirurgie
+    - Pneumothorax
+    - Les traumatismes thoraciques
+
+- Pathologie cardiovasculaire
+  - Médecine
+    - Rhumatisme articulaire aigu
+    - Les endocardites infectieuses
+    - Insuffisance mitrale
+    - Insuffisance aortique
+    - Rétrécissement mitral
+    - Rétrécissement aortique
+    - Les cardiopathies congénitales
+    - La maladie veineuse thrombo-embolique
+    - Angor chronique stable (syndrome coronarien chronique)
+    - SCA ST+
+    - SCA ST-
+    - Maladie du péricarde : péricardite aiguë
+    - La péricardite chronique constrictive
+    - La tamponnade
+    - Athérosclérose
+    - Risque cardiovasculaire
+    - HTA
+    - HTAP
+    - Insuffisance cardiaque
+    - Les troubles du rythme cardiaque
+    - Les troubles de conduction cardiaque
+    - Fibrillation atriale
+    - Syncope
+  - Chirurgie
+    - Dissections de l'aorte
+    - Les prothèses valvulaires cardiaques
+    - Coarctation aortique
+    - Anévrisme de l'aorte abdominale
+    - AOMI (artériopathie oblitérante des membres inférieurs)
+    - Ischémie aiguë des membres inférieurs
+    - Varices des membres inférieurs
+
+- Pathologie digestive
+  - Médecine
+    - Les hépatites aiguës et chroniques
+    - Hépatites virales
+    - Hépatites chroniques virales B et C
+    - Maladies inflammatoires chroniques de l'intestin (MICI)
+    - Helicobacter pylori et pathologie gastro-duodénale
+    - Maladies ulcéreuses gastro-duodénales
+    - Le reflux gastro-œsophagien (RGO)
+    - Les troubles fonctionnels intestinaux
+    - La diverticulose colique
+    - Les syndromes de malabsorption
+    - Maladie cœliaque
+    - Gastrites
+    - Dyspepsie
+    - Parasitoses digestives
+    - La tuberculose abdominale
+    - Fistules anales et suppurations
+    - Fissures anales
+    - Pathologies proctologiques fréquentes
+    - La maladie hémorroïdaire
+    - Cirrhose
+    - Hypertension portale
+    - Pancréatite chronique
+    - Hémochromatose
+    - Maladie de Wilson
+  - Chirurgie
+    - Les péritonites aiguës
+    - Les appendicites aiguës
+    - Cancer du pancréas
+    - Ischémie intestinale aiguë
+    - Le kyste hydatique du foie
+    - La lithiase de la vésicule biliaire et ses complications
+    - L'occlusion intestinale aiguë
+    - Le cancer du côlon
+    - Le cancer du rectum
+    - Pancréatites aiguës
+    - Les tumeurs du foie
+    - Cancers biliaires
+    - Pathologie herniaire de la paroi abdominale
+    - Cancer de l'estomac
+    - Cancer de l'œsophage
+    - Traumatismes de l'abdomen
+    - Ingestion caustique
+    - Abcès hépatique

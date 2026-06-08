@@ -1,0 +1,172 @@
+S9
+- Gynécologie - Obstétrique
+  - Gynécologie
+    - Cycle menstruel
+    - Puberté
+    - Aménorrhée
+    - Contraception
+    - Ménopause
+    - Maladies inflammatoires du pelvis
+    - Infections urinaires
+    - Tumeurs du sein
+    - Fibromes utérins
+    - Les endométrioses
+    - Tumeurs de l'ovaire
+    - Cancer de l'endomètre
+    - Cancer du col de l'utérus
+    - Cancer de la vulve
+    - Maladie trophoblastique gestationnelle
+    - Grossesse extra-utérine (GEU)
+    - Prolapsus génitaux
+    - Tuberculose génitale
+  - Obstétrique
+    - Suivi de la grossesse et consultations prénatales
+    - Grossesse normale
+    - Travail normal
+    - Les éléments mécaniques de l'accouchement
+    - Délivrance normale et pathologique
+    - Les avortements spontanés
+    - Menace d'accouchement prématuré (MAP)
+    - Rupture prématurée des membranes
+    - Placenta praevia
+    - Hématome rétro-placentaire (HRP)
+    - Infections et grossesse
+    - Diabète et grossesse
+    - Cardiopathies et grossesse
+    - HTA gravidique
+    - Grossesses multiples
+    - Grossesses prolongées et dépassement de terme
+    - Anomalies du liquide amniotique
+    - Allo-immunisation fœto-maternelle
+    - Rythme cardiaque fœtal et hypoxie fœtale
+    - Asphyxie périnatale
+    - RCIU
+    - Mort fœtale intra-utérine (MFIU)
+    - Procidence du cordon
+    - Accouchement sur utérus cicatriciel
+    - Mort maternelle
+    - Suites de couches normales et pathologiques
+    - Présentation du sommet
+    - Présentations céphaliques défléchies
+    - Présentation de siège
+    - Présentation transverse (de l'épaule)
+
+- Santé mentale
+  - Psychiatrie clinique
+    - Histoire de la psychiatrie
+    - Les états dépressifs
+    - Les troubles bipolaires
+    - Les schizophrénies
+    - Les délires chroniques non dissociatifs
+    - Accès psychotique aigu
+    - Troubles anxieux : généralités
+    - Trouble anxieux généralisé (TAG)
+    - Trouble panique
+    - Troubles phobiques
+    - Trouble obsessionnel compulsif (TOC)
+    - Trouble de stress post-traumatique (PTSD)
+    - Les addictions aux produits
+    - Alcoolisme
+    - Delirium tremens
+    - Risques et conduites suicidaires
+    - Troubles de la personnalité
+    - Hystérie
+    - Troubles des conduites alimentaires (TCA)
+    - Les troubles psychosomatiques
+    - Les troubles psychologiques de la grossesse et du post-partum
+    - Les troubles des conduites sexuelles
+    - Manifestations psychiatriques de l'épilepsie
+    - Manifestations psychiatriques de la neurosyphilis
+    - Psychothérapie
+    - Trouble du spectre de l'autisme (TSA)
+    - Dépression de l'enfant et de l'adolescent
+    - Maltraitance et sévices
+    - TDAH
+    - L'échec scolaire (difficultés scolaires)
+  - Psychopharmacologie
+    - Les antidépresseurs
+    - Les antipsychotiques
+    - Les anxiolytiques
+    - Les hypnotiques
+    - Les thymorégulateurs
+    - Sismothérapie et stimulation magnétique transcrânienne (SMT)
+
+- ORL - Maxillo-facial - Ophtalmologie
+  - Maxillo-facial
+    - Les cellulites cervico-faciales d'origine dentaire
+    - Les tumeurs bénignes des maxillaires
+    - Les tumeurs malignes des maxillaires
+    - La pathologie des glandes salivaires
+    - Limitation de l'ouverture buccale
+    - Ankylose temporo-mandibulaire
+    - Cancers de la cavité buccale
+    - Urgences faciales
+    - Fractures du massif facial
+    - Fracture mandibulaire
+    - Plaies de la face
+  - ORL
+    - Otite moyenne aiguë
+    - Otites moyennes chroniques simples
+    - Otites moyennes chroniques dangereuses
+    - Otospongiose
+    - Paralysie faciale périphérique
+    - Les angines
+    - Rhinite allergique
+    - CAT devant un nodule thyroïdien
+    - CAT devant une adénopathie cervicale
+    - Cancer du larynx
+    - Cancer du cavum
+    - Cancer de la langue
+    - Rhinopharyngite de l'enfant
+    - Les rhinosinusites
+  - Ophtalmologie
+    - Rappel anatomique
+    - Les cataractes
+    - Les troubles de réfraction
+    - Les glaucomes
+    - Œil rouge
+    - Greffe de cornée et don d'organes
+    - Rétinoblastome
+    - Rétinopathie diabétique
+    - Les traumatismes du globe oculaire
+    - Contusion oculaire
+    - Brûlures oculaires
+
+- Urgences - Réanimation - Soins palliatifs - Chirurgie plastique
+  - Urgences - Réanimation
+    - États de choc : généralités
+    - Choc hypovolémique
+    - Choc anaphylactique
+    - Choc septique
+    - Choc cardiogénique
+    - Insuffisance respiratoire aiguë (détresse respiratoire aiguë)
+    - Asthme aigu grave
+    - SDRA
+    - Monitorage
+    - Arrêt cardiaque (ACR)
+    - Prise en charge d'un traumatisme grave
+    - Traumatismes crâniens graves (phase précoce)
+    - PEC d'un patient en état de mort encéphalique
+    - Brûlés graves : prise en charge
+    - Intoxications aiguës
+    - Envenimation par morsure de serpent
+    - Envenimation par piqûre de scorpion
+    - Les complications métaboliques aiguës du diabète (urgences hyperglycémiques)
+    - Prise en charge du coma
+    - Troubles hydroélectrolytiques
+    - Dysnatrémies
+    - Dyskaliémies
+    - Les troubles acido-basiques
+    - Les infections associées aux soins
+  - Soins palliatifs
+    - Approche palliative de la douleur
+    - Douleur : physiopathologie et évaluation
+    - Prise en charge de la douleur aiguë
+    - PEC des symptômes et complications en soins palliatifs
+    - Communication, soutien psychologique et éthique en soins palliatifs
+    - Alimentation et hydratation en soins palliatifs
+  - Chirurgie plastique
+    - La cicatrisation cutanée
+    - Les pansements
+    - PEC locale des brûlures à la phase aiguë
+    - Les escarres

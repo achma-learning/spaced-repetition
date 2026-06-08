@@ -1,0 +1,878 @@
+S5
+- Parasitologie - Mycologie - Maladies infectieuses
+  - Parasitologie - Mycologie
+    - Généralités en parasitologie et mycologie médicale
+    - Amibes et amibiases
+    - Flagelloses digestives et urogénitales
+    - Protozooses intestinales opportunistes
+    - Paludisme (Malaria)
+    - Leishmanioses
+    - Toxoplasmoses
+    - Les trypanosomiases : maladie du sommeil et maladie de Chagas
+    - Généralités sur les helminthes et helminthiases
+    - Nématodes : Oxyure, Trichocéphale, Ascaris
+    - Nématodes : Trichine, Ankylostomes et Anguillules
+    - Filaires et filarioses
+    - Syndromes de larva migrans et nématodes tissulaires
+    - Les cestodes et cestodoses (taeniasis et cysticercose)
+    - Echinococcoses humaines (hydatidoses)
+    - Trématodes - distomatoses (les douves)
+    - Bilharzioses
+    - Entomologie médicale et ectoparasitoses
+    - Mycologie médicale - introduction et généralités
+    - Levures et levuroses
+    - Les mycoses à champignons filamenteux
+  - Maladies infectieuses
+    - Epidémiologie des maladies infectieuses
+    - Fièvres typhoïdes
+    - Les méningites infectieuses de l'adulte
+    - La méningo-encéphalite tuberculeuse
+    - La méningo-encéphalite herpétique
+    - Infection par le VIH
+    - Les infections associées aux soins (IAS)
+    - Rickettsioses - fièvre Q
+    - Accidents d'exposition au sang (AES)
+    - La rage humaine
+    - La brucellose
+    - Le tétanos
+    - Les infections à staphylocoques
+    - Les infections à streptocoques
+    - Le choléra
+    - COVID-19
+    - Les fièvres persistantes
+    - Leptospiroses
+    - Toxi-infections alimentaires collectives (TIAC)
+    - Borrélioses
+    - Bilharziose uro-génitale
+
+- Pharmacologie
+  - Pharmacologie générale
+    - Introduction à la pharmacologie
+    - La vie du médicament
+    - Pharmacocinétique
+    - Effets indésirables des médicaments et pharmacovigilance
+    - Les interactions médicamenteuses
+    - Les essais cliniques
+    - Les règles générales de la prescription médicamenteuse
+    - Le suivi thérapeutique pharmacologique
+    - La prescription chez la femme enceinte et allaitante
+    - La prescription médicamenteuse chez l'enfant et le sujet âgé
+    - Médicament et pathologie du foie
+  - Pharmacologie spécifique
+    - Antiépileptiques
+    - Antidépresseurs
+    - Anxiolytiques
+    - Anti-bacillaires
+    - Bronchodilatateurs
+    - Antitussifs
+    - Antithrombotiques 1
+    - Antithrombotiques 2
+    - Antithrombotiques 3
+    - Les inhibiteurs du SRAA
+    - Les hypolipémiants
+    - Les inhibiteurs calciques
+    - Bétabloquants
+    - Anti-angoreux
+    - Digitaliques
+    - Prise en charge hygiéno-diététique et médicamenteuse (les laxatifs)
+    - Traitement de la maladie ulcéreuse gastroduodénale
+    - Antispasmodiques
+    - Rein et médicaments
+    - Les diurétiques
+    - Les anti-inflammatoires
+    - L'insulinothérapie
+    - Les antidiabétiques
+    - Les antalgiques
+    - Antibiothérapie - généralités
+    - Bêta-lactamines
+    - Aminosides
+    - Glycopeptides
+    - Imidazolés
+    - Quinolones
+    - Cyclines
+    - Macrolides
+    - Sulfamides
+    - Phénicolés
+    - Antiviraux
+    - Antifongiques
+
+- Radiologie - Imagerie médicale
+  - Neuroradiologie
+    - Moyens d'exploration en neuroradiologie
+    - Imagerie des AVC
+    - Arbre décisionnel des AVC
+    - Traumatismes crânio-encéphaliques
+  - Imagerie digestive
+    - Sémiologie radiologique
+    - Imagerie du tube digestif 1 - techniques d'exploration et sémiologie élémentaire
+    - Imagerie du tube digestif 2
+    - Imagerie du foie
+    - Imagerie du pancréas
+    - Imagerie des voies biliaires
+    - Abdomen aigu
+  - Imagerie thoracique et cardiaque
+    - L'exploration radiologique du thorax
+    - Syndrome alvéolaire et interstitiel
+    - Syndrome bronchique et troubles de la ventilation
+    - Syndrome pleural
+    - Le médiastin normal et pathologique
+    - Imagerie des infections pulmonaires
+    - Imagerie des tumeurs malignes broncho-pulmonaires
+    - Moyens de l'exploration radiologique du cœur
+    - Radiologie interventionnelle
+  - Imagerie ostéo-articulaire
+    - Approche diagnostique d'une lésion osseuse
+    - Les tumeurs osseuses malignes
+    - Les tumeurs osseuses bénignes
+    - Les ostéoarthrites 1 - ostéomyélites et ostéites
+    - Les ostéoarthrites 2 - spondylodiscites
+    - Exploration radiologique de l'arthrose
+    - Exploration radiologique du rachis
+  - Imagerie uro-génitale et pelvienne
+    - Exploration radiologique de l'appareil urinaire
+    - Syndrome obstructif des voies urinaires
+    - Syndrome de masse rénale
+    - Exploration radiologique du pelvis féminin
+    - Exploration radiologique d'une masse pelvienne
+    - Exploration radiologique du sein
+    - Exploration radiologique du nodule du sein
+  - Imagerie pédiatrique
+    - Imagerie pédiatrique - généralités
+    - Imagerie pédiatrique - applications
+
+- Anatomie pathologique
+  - Anatomie pathologique générale et oncologie fondamentale
+    - Introduction à l'anatomie pathologique
+    - Techniques en anatomie pathologique - partie 1
+    - Techniques en anatomie pathologique - partie 2
+    - Introduction à la pathologie tumorale
+    - Généralités sur les tumeurs bénignes
+    - Bases fondamentales de l'oncogenèse
+    - La cellule cancéreuse
+    - Les métastases
+    - Le stroma tumoral
+    - Les amyloses
+  - Pathologie générale
+    - Les maladies de surcharge
+    - Les processus inflammatoires
+    - Les phases de l'inflammation
+    - L'inflammation granulomateuse (chronique)
+    - L'inflammation spécifique
+    - La cicatrisation
+    - La pathologie circulatoire
+
+S6
+- Pathologie respiratoire
+  - Médecine
+    - Pneumopathies interstitielles diffuses (PID)
+    - La sarcoïdose
+    - Pneumoconioses
+    - Pneumopathie d'hypersensibilité (alvéolite allergique extrinsèque)
+    - Les infections respiratoires basses communautaires (IRABC)
+    - BPCO
+    - Asthme
+    - Cancer bronchique
+    - Infections respiratoires au cours du VIH
+    - Pathologie du tabac
+    - Mycoses respiratoires (aspergillose)
+    - Hypertension pulmonaire (HTP)
+    - Syndrome d'apnée obstructive du sommeil
+    - Les pleurésies
+    - Abcès pulmonaire
+    - Dilatation des bronches (DDB)
+    - Kyste hydatique pulmonaire (KHP)
+    - Insuffisance respiratoire aiguë
+    - Introduction à la tuberculose
+    - Primo-infection tuberculeuse
+    - Tuberculose pulmonaire commune
+    - Tuberculoses aiguës
+    - Tumeurs médiastinales
+  - Chirurgie
+    - Pneumothorax
+    - Les traumatismes thoraciques
+
+- Pathologie cardiovasculaire
+  - Médecine
+    - Rhumatisme articulaire aigu
+    - Les endocardites infectieuses
+    - Insuffisance mitrale
+    - Insuffisance aortique
+    - Rétrécissement mitral
+    - Rétrécissement aortique
+    - Les cardiopathies congénitales
+    - La maladie veineuse thrombo-embolique
+    - Angor chronique stable (syndrome coronarien chronique)
+    - SCA ST+
+    - SCA ST-
+    - Maladie du péricarde : péricardite aiguë
+    - La péricardite chronique constrictive
+    - La tamponnade
+    - Athérosclérose
+    - Risque cardiovasculaire
+    - HTA
+    - HTAP
+    - Insuffisance cardiaque
+    - Les troubles du rythme cardiaque
+    - Les troubles de conduction cardiaque
+    - Fibrillation atriale
+    - Syncope
+  - Chirurgie
+    - Dissections de l'aorte
+    - Les prothèses valvulaires cardiaques
+    - Coarctation aortique
+    - Anévrisme de l'aorte abdominale
+    - AOMI (artériopathie oblitérante des membres inférieurs)
+    - Ischémie aiguë des membres inférieurs
+    - Varices des membres inférieurs
+
+- Pathologie digestive
+  - Médecine
+    - Les hépatites aiguës et chroniques
+    - Hépatites virales
+    - Hépatites chroniques virales B et C
+    - Maladies inflammatoires chroniques de l'intestin (MICI)
+    - Helicobacter pylori et pathologie gastro-duodénale
+    - Maladies ulcéreuses gastro-duodénales
+    - Le reflux gastro-œsophagien (RGO)
+    - Les troubles fonctionnels intestinaux
+    - La diverticulose colique
+    - Les syndromes de malabsorption
+    - Maladie cœliaque
+    - Gastrites
+    - Dyspepsie
+    - Parasitoses digestives
+    - La tuberculose abdominale
+    - Fistules anales et suppurations
+    - Fissures anales
+    - Pathologies proctologiques fréquentes
+    - La maladie hémorroïdaire
+    - Cirrhose
+    - Hypertension portale
+    - Pancréatite chronique
+    - Hémochromatose
+    - Maladie de Wilson
+  - Chirurgie
+    - Les péritonites aiguës
+    - Les appendicites aiguës
+    - Cancer du pancréas
+    - Ischémie intestinale aiguë
+    - Le kyste hydatique du foie
+    - La lithiase de la vésicule biliaire et ses complications
+    - L'occlusion intestinale aiguë
+    - Le cancer du côlon
+    - Le cancer du rectum
+    - Pancréatites aiguës
+    - Les tumeurs du foie
+    - Cancers biliaires
+    - Pathologie herniaire de la paroi abdominale
+    - Cancer de l'estomac
+    - Cancer de l'œsophage
+    - Traumatismes de l'abdomen
+    - Ingestion caustique
+    - Abcès hépatique
+
+S7
+- Maladies de l'enfant
+  - Pédiatrie
+    - Hématuries
+    - Glomérulonéphrites aiguës chez l'enfant
+    - Protéinurie
+    - Syndrome néphrotique
+    - Purpura rhumatoïde
+    - Arthralgies et arthrite chez l'enfant
+    - Infections urinaires chez l'enfant
+    - Énurésie
+    - Asthme de l'enfant et du nourrisson
+    - Pleurésie de l'enfant
+    - Infections respiratoires aiguës chez l'enfant
+    - Coqueluche
+    - Vomissements chez l'enfant
+    - Diarrhée chez l'enfant
+    - Diarrhée aiguë et déshydratation chez l'enfant
+    - Alimentation et besoins nutritionnels chez l'enfant
+    - Carences nutritionnelles chez l'enfant
+    - Le diabète chez l'enfant
+    - Retard staturo-pondéral
+    - Anémie chez l'enfant
+    - Cancer de l'enfant et leucémie aiguë
+    - Syndrome hémorragique chez l'enfant (troubles de l'hémostase)
+    - Dyspnée aiguë chez le nourrisson
+    - Douleurs abdominales chez l'enfant
+    - Développement psychomoteur
+    - Tuberculose chez l'enfant
+    - Fièvre de l'enfant
+    - Fièvre éruptive chez l'enfant
+    - Infections neuroméningées de l'enfant
+    - Déficit immunitaire
+  - Néonatologie
+    - Réanimation du nouveau-né
+    - Asphyxie périnatale (APN)
+    - Infections néonatales
+    - Détresses respiratoires néonatales
+    - Ictères néonataux
+    - RCIU
+    - Convulsions néonatales
+    - Prématurité
+    - Cardiopathies congénitales
+    - Cyanose néonatale
+    - Insuffisance cardiaque du nourrisson
+  - Chirurgie pédiatrique
+    - Malformations congénitales
+    - Atrésie de l'œsophage
+    - Hernie diaphragmatique
+    - Occlusion néonatale
+    - Maladie de Hirschsprung
+    - Uropathies de l'enfant
+    - Invagination intestinale
+    - Malformation anorectale
+    - Proctologie pédiatrique
+    - Torsion du cordon spermatique
+    - Pathologie du canal péritonéo-vaginal
+    - Anomalie de migration et de position testiculaire
+    - Sténose hypertrophique du pylore
+    - Les particularités des fractures chez l'enfant
+    - Infections ostéo-articulaires de l'enfant
+    - Les boiteries de l'enfant
+    - Déformation rachidienne
+    - Maladie luxante de la hanche
+    - Pied du nouveau-né
+    - Tumeurs osseuses malignes de l'enfant
+
+- Dermatologie - Endocrinologie
+  - Dermatologie
+    - Écoulement urétéral
+    - Ulcération génitale
+    - Syphilis
+    - Manifestations cutanées du VIH
+    - Toxidermie médicamenteuse
+    - Urticaire
+    - Acné
+    - Psoriasis
+    - Les cancers cutanés
+    - Mélanomes
+    - Dermatoses bulleuses
+    - Érythème noueux
+    - Prurit
+    - Tuberculose cutanée
+    - La lèpre
+    - Infections cutanées à HSV
+    - Infections cutanées à HPV (papillomavirus)
+    - Molluscum contagiosum
+    - Mycoses superficielles
+    - Infections cutanées à virus varicelle-zona
+    - Dermatoses bactériennes
+    - Les ectoparasitoses
+    - Eczémas
+  - Endocrinologie
+    - Pathologie thyroïdienne
+    - Nodule thyroïdien
+    - Nutrition clinique
+    - Adénome hypophysaire
+    - Syndrome de Cushing
+    - L'obésité chez l'adulte
+    - Insuffisance surrénalienne
+    - Diabète : définition et classification
+    - Diabète type 1
+    - Diabète type 2
+    - Diabète cortico-induit
+
+- Neurologie - Neurochirurgie
+  - Neurologie
+    - Cours introductif de neurologie
+    - Sclérose latérale amyotrophique
+    - Neuropathies périphériques
+    - Syndrome myasthénique
+    - Myopathies
+    - Neurosyphilis
+    - Ataxie cérébelleuse
+    - Les AVC ischémiques
+    - Thrombophlébite cérébrale
+    - Maladie de Parkinson
+    - Sclérose en plaques (SEP)
+    - Neuro-Behçet
+    - Épilepsie
+    - Démences
+    - Troubles du sommeil
+    - Céphalées
+  - Neurochirurgie
+    - Spina bifida
+    - Hydrocéphalie
+    - Malformation de la charnière cranio-cervicale
+    - Syndrome de compression médullaire
+    - Syndrome de la queue de cheval
+    - Sciatique par hernie discale
+    - Hématomes intracérébraux
+    - L'hémorragie spontanée des méninges
+    - Suppuration intracrânienne
+    - Hydatidose cérébrale et vertébro-médullaire
+    - Tuberculose du système nerveux
+    - Les lésions sellaires et supra-sellaires
+    - Craniosténoses
+    - Traumatismes du rachis dorso-lombaire
+    - Traumatismes crânio-encéphaliques
+    - Traumatismes du rachis cervical
+    - Gliomes hémisphériques
+    - Méningiomes intracrâniens
+    - Métastases cérébrales
+    - Tumeurs de la fosse cérébrale postérieure (FCP)
+
+- Hématologie - Oncologie
+  - Hématologie
+    - Anémie par carence en fer
+    - Anémie mégaloblastique
+    - Aplasie médullaire
+    - Anémie par déficit en G6PD
+    - Sphérocytose héréditaire
+    - Drépanocytose
+    - Thalassémie
+    - Leucémie aiguë
+    - Leucémie myéloïde chronique
+    - Leucémie lymphoïde chronique (LLC)
+    - Syndromes myéloprolifératifs Philadelphie négatifs
+    - Lymphome malin non hodgkinien (LMNH)
+    - Maladie de Hodgkin
+    - Myélome multiple
+    - Purpura thrombopénique immunologique (PTI)
+    - Hémophilie
+    - Transfusion sanguine
+    - Urgences hématologiques 1 : syndrome de leucostase et CIVD
+    - Urgences hématologiques 2 : syndrome de lyse tumorale et neutropénie fébrile
+  - Oncologie
+    - Épidémiologie des cancers
+    - Diagnostic, bilan d'extension et classification des cancers
+    - Douleur et cancer
+    - Urgences oncologiques
+    - Radiothérapie
+    - Chimiothérapie
+    - Hormonothérapie
+    - Thérapies ciblées
+    - Immunothérapie
+
+S8
+- Maladies de l'appareil locomoteur
+  - Traumatologie
+    - Traumatisme du bassin
+    - Luxation de la hanche
+    - Fracture de l'extrémité supérieure du fémur (ESF)
+    - Fractures du genou
+    - Lésions ménisco-ligamentaires du genou
+    - Traumatismes vasculaires
+    - Traumatisme de la cheville
+    - Fracture du fémur
+    - Fracture de la jambe
+    - Traumatismes de l'épaule
+    - Plaies de la main
+    - Fractures de la main
+    - Traumatismes des nerfs périphériques
+    - Tumeurs osseuses
+    - Tumeurs des parties molles
+    - Fracture de la diaphyse humérale
+    - Fracture de la palette humérale
+    - Traumatismes du coude
+    - Fracture de l'olécrane, de la tête radiale et des deux os de l'avant-bras
+    - Fractures du poignet (scaphoïde)
+    - Les infections de la main
+  - Rhumatologie
+    - Introduction à la rhumatologie
+    - Mono-arthrite
+    - Épaule douloureuse
+    - Hanche douloureuse
+    - Radiculalgie des membres
+    - Ostéoporose
+    - Ostéomalacie
+    - Hypercalcémies
+    - Pathologie abarticulaire
+    - Algodystrophie
+    - Syndrome du canal carpien
+    - CAT devant un rhumatisme inflammatoire débutant
+    - Polyarthrite rhumatoïde
+    - Goutte
+    - Arthrose
+    - Lombalgies
+    - Tuberculose ostéo-articulaire
+    - Spondylarthrite ankylosante
+  - Médecine physique et de réadaptation (MPR)
+    - Handicap : généralités
+    - Principaux intervenants et techniques de rééducation et réadaptation
+    - Appareillages et aides techniques
+    - L'activité physique et sport
+    - MPR et affections de l'appareil locomoteur
+    - MPR et affections neurologiques
+    - MPR et troubles de la marche
+
+- Immunopathologie - Génétique médicale - Maladies de système
+  - Immunopathologie
+    - Introduction à l'immunologie
+    - Déficits immunitaires
+    - Hypersensibilité immédiate et allergie
+    - Hypersensibilité de type 2 et 3
+    - Hypersensibilité de type 4
+    - Auto-immunité et maladies auto-immunes
+    - Immunité anti-infectieuse
+    - Immunité anti-tumorale
+    - Immunité anti-greffe
+    - Vaccination
+    - Anticorps monoclonaux
+    - Immunosuppresseurs
+  - Génétique médicale
+    - Introduction à la génétique
+    - Modes de transmission des maladies héréditaires
+    - Génétique des populations
+    - Mutations : classification, conséquences et nomenclature
+    - Caryotype
+    - La pathologie chromosomique
+    - Exemples de pathologies autosomiques et gonosomiques
+    - Syndrome de Turner
+    - Syndrome de Klinefelter
+    - Conseil génétique
+    - Diagnostic anténatal
+    - Amyotrophie spinale (SMA)
+    - Syndrome de l'X fragile
+    - Syndrome de Prader-Willi
+  - Maladies de système
+    - Introduction aux vascularites systémiques
+    - Vascularites systémiques
+    - Artérite à cellules géantes
+    - Maladie de Takayasu
+    - Phénomène de Raynaud
+    - Syndrome des anti-phospholipides (SAPL)
+    - Les myopathies inflammatoires acquises idiopathiques
+    - Lupus érythémateux systémique
+    - Sclérodermie systémique
+    - Maladie de Behçet
+    - Syndrome de Gougerot-Sjögren
+
+- Anatomie pathologique II
+  - Comment remplir une fiche de demande d'examen anatomopathologique
+  - Lecture critique d'un compte rendu anatomopathologique
+  - Tumeurs du foie
+  - Polypes et polyposes digestives
+  - Cancers colo-rectaux
+  - Pathologies de l'œsophage
+  - Tumeurs de l'estomac
+  - Démarche diagnostique devant une métastase hépatique d'un primitif inconnu
+  - Cancer du sein
+  - Mastopathies bénignes
+  - Tumeurs broncho-pulmonaires
+  - Tumeur de l'ovaire
+  - Cancer du col utérin
+  - Tumeurs de la vessie
+  - Cancer de la prostate
+  - Cancer du testicule
+  - Tumeurs du rein
+  - Lymphome de Hodgkin
+
+S9
+- Gynécologie - Obstétrique
+  - Gynécologie
+    - Cycle menstruel
+    - Puberté
+    - Aménorrhée
+    - Contraception
+    - Ménopause
+    - Maladies inflammatoires du pelvis
+    - Infections urinaires
+    - Tumeurs du sein
+    - Fibromes utérins
+    - Les endométrioses
+    - Tumeurs de l'ovaire
+    - Cancer de l'endomètre
+    - Cancer du col de l'utérus
+    - Cancer de la vulve
+    - Maladie trophoblastique gestationnelle
+    - Grossesse extra-utérine (GEU)
+    - Prolapsus génitaux
+    - Tuberculose génitale
+  - Obstétrique
+    - Suivi de la grossesse et consultations prénatales
+    - Grossesse normale
+    - Travail normal
+    - Les éléments mécaniques de l'accouchement
+    - Délivrance normale et pathologique
+    - Les avortements spontanés
+    - Menace d'accouchement prématuré (MAP)
+    - Rupture prématurée des membranes
+    - Placenta praevia
+    - Hématome rétro-placentaire (HRP)
+    - Infections et grossesse
+    - Diabète et grossesse
+    - Cardiopathies et grossesse
+    - HTA gravidique
+    - Grossesses multiples
+    - Grossesses prolongées et dépassement de terme
+    - Anomalies du liquide amniotique
+    - Allo-immunisation fœto-maternelle
+    - Rythme cardiaque fœtal et hypoxie fœtale
+    - Asphyxie périnatale
+    - RCIU
+    - Mort fœtale intra-utérine (MFIU)
+    - Procidence du cordon
+    - Accouchement sur utérus cicatriciel
+    - Mort maternelle
+    - Suites de couches normales et pathologiques
+    - Présentation du sommet
+    - Présentations céphaliques défléchies
+    - Présentation de siège
+    - Présentation transverse (de l'épaule)
+
+- Santé mentale
+  - Psychiatrie clinique
+    - Histoire de la psychiatrie
+    - Les états dépressifs
+    - Les troubles bipolaires
+    - Les schizophrénies
+    - Les délires chroniques non dissociatifs
+    - Accès psychotique aigu
+    - Troubles anxieux : généralités
+    - Trouble anxieux généralisé (TAG)
+    - Trouble panique
+    - Troubles phobiques
+    - Trouble obsessionnel compulsif (TOC)
+    - Trouble de stress post-traumatique (PTSD)
+    - Les addictions aux produits
+    - Alcoolisme
+    - Delirium tremens
+    - Risques et conduites suicidaires
+    - Troubles de la personnalité
+    - Hystérie
+    - Troubles des conduites alimentaires (TCA)
+    - Les troubles psychosomatiques
+    - Les troubles psychologiques de la grossesse et du post-partum
+    - Les troubles des conduites sexuelles
+    - Manifestations psychiatriques de l'épilepsie
+    - Manifestations psychiatriques de la neurosyphilis
+    - Psychothérapie
+    - Trouble du spectre de l'autisme (TSA)
+    - Dépression de l'enfant et de l'adolescent
+    - Maltraitance et sévices
+    - TDAH
+    - L'échec scolaire (difficultés scolaires)
+  - Psychopharmacologie
+    - Les antidépresseurs
+    - Les antipsychotiques
+    - Les anxiolytiques
+    - Les hypnotiques
+    - Les thymorégulateurs
+    - Sismothérapie et stimulation magnétique transcrânienne (SMT)
+
+- ORL - Maxillo-facial - Ophtalmologie
+  - Maxillo-facial
+    - Les cellulites cervico-faciales d'origine dentaire
+    - Les tumeurs bénignes des maxillaires
+    - Les tumeurs malignes des maxillaires
+    - La pathologie des glandes salivaires
+    - Limitation de l'ouverture buccale
+    - Ankylose temporo-mandibulaire
+    - Cancers de la cavité buccale
+    - Urgences faciales
+    - Fractures du massif facial
+    - Fracture mandibulaire
+    - Plaies de la face
+  - ORL
+    - Otite moyenne aiguë
+    - Otites moyennes chroniques simples
+    - Otites moyennes chroniques dangereuses
+    - Otospongiose
+    - Paralysie faciale périphérique
+    - Les angines
+    - Rhinite allergique
+    - CAT devant un nodule thyroïdien
+    - CAT devant une adénopathie cervicale
+    - Cancer du larynx
+    - Cancer du cavum
+    - Cancer de la langue
+    - Rhinopharyngite de l'enfant
+    - Les rhinosinusites
+  - Ophtalmologie
+    - Rappel anatomique
+    - Les cataractes
+    - Les troubles de réfraction
+    - Les glaucomes
+    - Œil rouge
+    - Greffe de cornée et don d'organes
+    - Rétinoblastome
+    - Rétinopathie diabétique
+    - Les traumatismes du globe oculaire
+    - Contusion oculaire
+    - Brûlures oculaires
+
+- Urgences - Réanimation - Soins palliatifs - Chirurgie plastique
+  - Urgences - Réanimation
+    - États de choc : généralités
+    - Choc hypovolémique
+    - Choc anaphylactique
+    - Choc septique
+    - Choc cardiogénique
+    - Insuffisance respiratoire aiguë (détresse respiratoire aiguë)
+    - Asthme aigu grave
+    - SDRA
+    - Monitorage
+    - Arrêt cardiaque (ACR)
+    - Prise en charge d'un traumatisme grave
+    - Traumatismes crâniens graves (phase précoce)
+    - PEC d'un patient en état de mort encéphalique
+    - Brûlés graves : prise en charge
+    - Intoxications aiguës
+    - Envenimation par morsure de serpent
+    - Envenimation par piqûre de scorpion
+    - Les complications métaboliques aiguës du diabète (urgences hyperglycémiques)
+    - Prise en charge du coma
+    - Troubles hydroélectrolytiques
+    - Dysnatrémies
+    - Dyskaliémies
+    - Les troubles acido-basiques
+    - Les infections associées aux soins
+  - Soins palliatifs
+    - Approche palliative de la douleur
+    - Douleur : physiopathologie et évaluation
+    - Prise en charge de la douleur aiguë
+    - PEC des symptômes et complications en soins palliatifs
+    - Communication, soutien psychologique et éthique en soins palliatifs
+    - Alimentation et hydratation en soins palliatifs
+  - Chirurgie plastique
+    - La cicatrisation cutanée
+    - Les pansements
+    - PEC locale des brûlures à la phase aiguë
+    - Les escarres
+
+S10
+- Néphrologie - Urologie
+  - Néphrologie
+    - Introduction à la pathologie néphrologique
+    - Lésions glomérulaires minimes
+    - Hyalinose segmentaire et focale
+    - Glomérulonéphrite extra-membraneuse (GEM)
+    - Glomérulonéphrite membrano-proliférative (GNMP)
+    - Glomérulonéphrite aiguë post-infectieuse
+    - Glomérulonéphrites extra-capillaires
+    - Néphropathie à IgA
+    - Néphropathies tubulo-interstitielles
+    - Atteinte rénale au cours du myélome multiple
+    - Néphropathie diabétique
+    - Néphropathie lupique
+    - Les amyloses rénales
+    - Les maladies rénales héréditaires
+    - Insuffisance rénale aiguë
+    - Maladie rénale chronique (MRC)
+    - Transplantation rénale
+  - Urologie
+    - Hypertrophie bénigne de la prostate (HBP)
+    - Cancer de la prostate
+    - Cancer de la vessie
+    - Tumeurs des voies excrétrices
+    - Cancer du rein
+    - Tumeurs rétropéritonéales primitives
+    - Cancer de la verge
+    - Cancer du testicule
+    - Tuberculose uro-génitale
+    - Syndrome de la jonction pyélo-urétérale
+    - Reflux vésico-urétéral
+    - Les traumatismes uro-génitaux
+    - Anurie obstructive
+    - Rétrécissement scléro-inflammatoire urétral de l'adulte
+    - Torsion du cordon spermatique
+    - Incontinence urinaire
+    - Infection urinaire
+    - Lithiase urinaire
+    - Infertilité masculine
+    - Vessie neurologique
+    - Fistules uro-génitales
+
+- Santé publique
+  - Maladie et santé
+  - Déterminants de la santé
+  - Concepts de base en santé publique (partie 1)
+  - Concepts de base en santé publique (partie 2)
+  - Indicateurs de santé publique
+  - État de santé dans le monde
+  - Introduction à la santé environnementale
+  - Caractériser l'exposition environnementale
+  - Intervenir en santé environnementale
+  - Initiation à la méthodologie de la recherche clinique (3 parties)
+  - Les études descriptives
+  - Les études étiologiques : cas-témoins
+  - Les études étiologiques : cohorte
+  - Les mesures de fréquence en épidémiologie
+  - Les critères de causalité
+  - L'essai clinique randomisé
+  - Les indices de validité d'un test diagnostique
+  - Intervention en santé publique
+  - Planification d'une intervention
+  - La prévention
+  - La promotion de la santé
+  - Sécurité des soins
+  - Qualité des soins
+
+- Médecine légale - Éthique - Médecine du travail
+  - Médecine légale
+    - Introduction à la médecine légale
+    - Mort : phénomènes cadavériques et datation de la mort
+    - Formes médico-légales de la mort et certification du décès
+    - Levée de corps et autopsie
+    - Diagnostic médico-légal des blessures
+    - Les asphyxies mécaniques
+    - Les responsabilités médicales
+    - Les certificats médicaux
+    - Le contrat médical
+    - Le secret médical
+    - Information et consentement du patient
+    - Abstention fautive
+    - Sévices à l'enfant : repérage et conduite à tenir
+    - Les agressions sexuelles sur adultes et mineurs
+    - Infanticide
+    - Avortement illégal et thérapeutique
+    - Prélèvement et transplantation d'organes
+  - Éthique et déontologie
+    - Introduction à l'éthique
+    - Principes de l'éthique médicale
+    - Code de déontologie médicale
+    - Éthique médicale et don d'organes
+    - Éthique médicale et fin de vie
+    - Procréation médicalement assistée, fœtus et embryon
+    - Aspects éthiques de la télémédecine
+    - Principes de l'éthique de la recherche
+    - Conduite responsable de la recherche
+    - Recherche internationale : aspects éthiques
+    - Justice et équité
+    - Éthique en santé publique
+  - Médecine du travail
+    - Introduction à la médecine du travail
+    - Rôles et missions du médecin du travail
+    - Accident d'exposition au sang (AES)
+    - Réparation des accidents du travail
+    - Réparation des maladies professionnelles
+    - Les cancers professionnels
+    - Surdités professionnelles
+    - Asthme professionnel
+    - Dermatoses professionnelles
+    - Pneumoconioses (silicose pulmonaire)
+    - Les troubles musculo-squelettiques
+    - Les risques psychosociaux en milieu de travail
+    - Les risques professionnels en milieu de soins
+    - Troubles cardio-vasculaires professionnels
+    - Radioprotection en milieu de soins
+
+- Synthèse thérapeutique
+  - Vaccination au Maroc
+  - Traitements locaux en dermatologie
+  - Les AINS
+  - Corticothérapie : CAT devant un patient sous corticoïdes au long cours
+  - Traitement de la pathologie thyroïdienne
+  - Traitement du diabète (type 1 et 2)
+  - CAT devant une douleur thoracique aiguë
+  - SCA : prise en charge thérapeutique
+  - Prise en charge de l'HTA
+  - Traitement de l'IRABC
+  - Traitement de l'asthme
+  - Traitement antibacillaire (tuberculose)
+  - Traitement de la maladie ulcéreuse gastro-duodénale
+  - Traitement du RGO
+  - Traitement de l'otite moyenne aiguë (OMA)
+  - Traitement des angines aiguës
+  - Traitement de la sinusite aiguë
+  - Les antidépresseurs
+  - La prescription d'antibiotiques
+  - Échec de l'antibiothérapie
+  - Antiépileptiques
+  - Traitement de la migraine
+  - Synthèse thérapeutique en ophtalmologie

@@ -1,0 +1,113 @@
+S8
+- Maladies de l'appareil locomoteur
+  - Traumatologie
+    - Traumatisme du bassin
+    - Luxation de la hanche
+    - Fracture de l'extrémité supérieure du fémur (ESF)
+    - Fractures du genou
+    - Lésions ménisco-ligamentaires du genou
+    - Traumatismes vasculaires
+    - Traumatisme de la cheville
+    - Fracture du fémur
+    - Fracture de la jambe
+    - Traumatismes de l'épaule
+    - Plaies de la main
+    - Fractures de la main
+    - Traumatismes des nerfs périphériques
+    - Tumeurs osseuses
+    - Tumeurs des parties molles
+    - Fracture de la diaphyse humérale
+    - Fracture de la palette humérale
+    - Traumatismes du coude
+    - Fracture de l'olécrane, de la tête radiale et des deux os de l'avant-bras
+    - Fractures du poignet (scaphoïde)
+    - Les infections de la main
+  - Rhumatologie
+    - Introduction à la rhumatologie
+    - Mono-arthrite
+    - Épaule douloureuse
+    - Hanche douloureuse
+    - Radiculalgie des membres
+    - Ostéoporose
+    - Ostéomalacie
+    - Hypercalcémies
+    - Pathologie abarticulaire
+    - Algodystrophie
+    - Syndrome du canal carpien
+    - CAT devant un rhumatisme inflammatoire débutant
+    - Polyarthrite rhumatoïde
+    - Goutte
+    - Arthrose
+    - Lombalgies
+    - Tuberculose ostéo-articulaire
+    - Spondylarthrite ankylosante
+  - Médecine physique et de réadaptation (MPR)
+    - Handicap : généralités
+    - Principaux intervenants et techniques de rééducation et réadaptation
+    - Appareillages et aides techniques
+    - L'activité physique et sport
+    - MPR et affections de l'appareil locomoteur
+    - MPR et affections neurologiques
+    - MPR et troubles de la marche
+
+- Immunopathologie - Génétique médicale - Maladies de système
+  - Immunopathologie
+    - Introduction à l'immunologie
+    - Déficits immunitaires
+    - Hypersensibilité immédiate et allergie
+    - Hypersensibilité de type 2 et 3
+    - Hypersensibilité de type 4
+    - Auto-immunité et maladies auto-immunes
+    - Immunité anti-infectieuse
+    - Immunité anti-tumorale
+    - Immunité anti-greffe
+    - Vaccination
+    - Anticorps monoclonaux
+    - Immunosuppresseurs
+  - Génétique médicale
+    - Introduction à la génétique
+    - Modes de transmission des maladies héréditaires
+    - Génétique des populations
+    - Mutations : classification, conséquences et nomenclature
+    - Caryotype
+    - La pathologie chromosomique
+    - Exemples de pathologies autosomiques et gonosomiques
+    - Syndrome de Turner
+    - Syndrome de Klinefelter
+    - Conseil génétique
+    - Diagnostic anténatal
+    - Amyotrophie spinale (SMA)
+    - Syndrome de l'X fragile
+    - Syndrome de Prader-Willi
+  - Maladies de système
+    - Introduction aux vascularites systémiques
+    - Vascularites systémiques
+    - Artérite à cellules géantes
+    - Maladie de Takayasu
+    - Phénomène de Raynaud
+    - Syndrome des anti-phospholipides (SAPL)
+    - Les myopathies inflammatoires acquises idiopathiques
+    - Lupus érythémateux systémique
+    - Sclérodermie systémique
+    - Maladie de Behçet
+    - Syndrome de Gougerot-Sjögren
+
+- Anatomie pathologique II
+  - Comment remplir une fiche de demande d'examen anatomopathologique
+  - Lecture critique d'un compte rendu anatomopathologique
+  - Tumeurs du foie
+  - Polypes et polyposes digestives
+  - Cancers colo-rectaux
+  - Pathologies de l'œsophage
+  - Tumeurs de l'estomac
+  - Démarche diagnostique devant une métastase hépatique d'un primitif inconnu
+  - Cancer du sein
+  - Mastopathies bénignes
+  - Tumeurs broncho-pulmonaires
+  - Tumeur de l'ovaire
+  - Cancer du col utérin
+  - Tumeurs de la vessie
+  - Cancer de la prostate
+  - Cancer du testicule
+  - Tumeurs du rein
+  - Lymphome de Hodgkin

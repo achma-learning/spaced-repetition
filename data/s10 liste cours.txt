@@ -1,0 +1,141 @@
+S10
+- Néphrologie - Urologie
+  - Néphrologie
+    - Introduction à la pathologie néphrologique
+    - Lésions glomérulaires minimes
+    - Hyalinose segmentaire et focale
+    - Glomérulonéphrite extra-membraneuse (GEM)
+    - Glomérulonéphrite membrano-proliférative (GNMP)
+    - Glomérulonéphrite aiguë post-infectieuse
+    - Glomérulonéphrites extra-capillaires
+    - Néphropathie à IgA
+    - Néphropathies tubulo-interstitielles
+    - Atteinte rénale au cours du myélome multiple
+    - Néphropathie diabétique
+    - Néphropathie lupique
+    - Les amyloses rénales
+    - Les maladies rénales héréditaires
+    - Insuffisance rénale aiguë
+    - Maladie rénale chronique (MRC)
+    - Transplantation rénale
+  - Urologie
+    - Hypertrophie bénigne de la prostate (HBP)
+    - Cancer de la prostate
+    - Cancer de la vessie
+    - Tumeurs des voies excrétrices
+    - Cancer du rein
+    - Tumeurs rétropéritonéales primitives
+    - Cancer de la verge
+    - Cancer du testicule
+    - Tuberculose uro-génitale
+    - Syndrome de la jonction pyélo-urétérale
+    - Reflux vésico-urétéral
+    - Les traumatismes uro-génitaux
+    - Anurie obstructive
+    - Rétrécissement scléro-inflammatoire urétral de l'adulte
+    - Torsion du cordon spermatique
+    - Incontinence urinaire
+    - Infection urinaire
+    - Lithiase urinaire
+    - Infertilité masculine
+    - Vessie neurologique
+    - Fistules uro-génitales
+
+- Santé publique
+  - Maladie et santé
+  - Déterminants de la santé
+  - Concepts de base en santé publique (partie 1)
+  - Concepts de base en santé publique (partie 2)
+  - Indicateurs de santé publique
+  - État de santé dans le monde
+  - Introduction à la santé environnementale
+  - Caractériser l'exposition environnementale
+  - Intervenir en santé environnementale
+  - Initiation à la méthodologie de la recherche clinique (3 parties)
+  - Les études descriptives
+  - Les études étiologiques : cas-témoins
+  - Les études étiologiques : cohorte
+  - Les mesures de fréquence en épidémiologie
+  - Les critères de causalité
+  - L'essai clinique randomisé
+  - Les indices de validité d'un test diagnostique
+  - Intervention en santé publique
+  - Planification d'une intervention
+  - La prévention
+  - La promotion de la santé
+  - Sécurité des soins
+  - Qualité des soins
+
+- Médecine légale - Éthique - Médecine du travail
+  - Médecine légale
+    - Introduction à la médecine légale
+    - Mort : phénomènes cadavériques et datation de la mort
+    - Formes médico-légales de la mort et certification du décès
+    - Levée de corps et autopsie
+    - Diagnostic médico-légal des blessures
+    - Les asphyxies mécaniques
+    - Les responsabilités médicales
+    - Les certificats médicaux
+    - Le contrat médical
+    - Le secret médical
+    - Information et consentement du patient
+    - Abstention fautive
+    - Sévices à l'enfant : repérage et conduite à tenir
+    - Les agressions sexuelles sur adultes et mineurs
+    - Infanticide
+    - Avortement illégal et thérapeutique
+    - Prélèvement et transplantation d'organes
+  - Éthique et déontologie
+    - Introduction à l'éthique
+    - Principes de l'éthique médicale
+    - Code de déontologie médicale
+    - Éthique médicale et don d'organes
+    - Éthique médicale et fin de vie
+    - Procréation médicalement assistée, fœtus et embryon
+    - Aspects éthiques de la télémédecine
+    - Principes de l'éthique de la recherche
+    - Conduite responsable de la recherche
+    - Recherche internationale : aspects éthiques
+    - Justice et équité
+    - Éthique en santé publique
+  - Médecine du travail
+    - Introduction à la médecine du travail
+    - Rôles et missions du médecin du travail
+    - Accident d'exposition au sang (AES)
+    - Réparation des accidents du travail
+    - Réparation des maladies professionnelles
+    - Les cancers professionnels
+    - Surdités professionnelles
+    - Asthme professionnel
+    - Dermatoses professionnelles
+    - Pneumoconioses (silicose pulmonaire)
+    - Les troubles musculo-squelettiques
+    - Les risques psychosociaux en milieu de travail
+    - Les risques professionnels en milieu de soins
+    - Troubles cardio-vasculaires professionnels
+    - Radioprotection en milieu de soins
+
+- Synthèse thérapeutique
+  - Vaccination au Maroc
+  - Traitements locaux en dermatologie
+  - Les AINS
+  - Corticothérapie : CAT devant un patient sous corticoïdes au long cours
+  - Traitement de la pathologie thyroïdienne
+  - Traitement du diabète (type 1 et 2)
+  - CAT devant une douleur thoracique aiguë
+  - SCA : prise en charge thérapeutique
+  - Prise en charge de l'HTA
+  - Traitement de l'IRABC
+  - Traitement de l'asthme
+  - Traitement antibacillaire (tuberculose)
+  - Traitement de la maladie ulcéreuse gastro-duodénale
+  - Traitement du RGO
+  - Traitement de l'otite moyenne aiguë (OMA)
+  - Traitement des angines aiguës
+  - Traitement de la sinusite aiguë
+  - Les antidépresseurs
+  - La prescription d'antibiotiques
+  - Échec de l'antibiothérapie
+  - Antiépileptiques
+  - Traitement de la migraine
+  - Synthèse thérapeutique en ophtalmologie
