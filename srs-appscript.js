@@ -14,9 +14,9 @@
  * 
  * SETUP: Run setupTriggers() once → forget about it.
  * 
- * COLUMN MAP (0-indexed):
- *   A=# | B=Module | C=Subject | D=Topic | E=Last Review
- *   F=Mastery | G=Interval | H=Next Review | I=Status | J=Priority | K=Synced
+ * COLUMN MAP (0-indexed) — MUST match srs-system.xlsx exactly:
+ *   A=# | B=Semester | C=Module | D=Subject | E=Lesson | F=Last Review
+ *   G=Mastery | H=Interval | I=Next Review | J=Status | K=Priority | L=Synced | M=Event ID
  */
 
 // ═══════════════════════════════════════════════════════════════
@@ -30,17 +30,18 @@ const CONFIG = {
   // Column indices (0-based from data range)
   COL: {
     NUM:         0,   // A - row number
-    MODULE:      1,   // B
-    SUBJECT:     2,   // C
-    TOPIC:       3,   // D
-    LAST_REVIEW: 4,   // E — USER INPUT
-    MASTERY:     5,   // F — USER INPUT
-    INTERVAL:    6,   // G — formula
-    NEXT_REVIEW: 7,   // H — formula
-    STATUS:      8,   // I — formula
-    PRIORITY:    9,   // J — formula
-    SYNCED:     10,   // K — script-managed
-    EVENT_ID:   11,   // L — script-managed (hidden column)
+    SEMESTER:    1,   // B
+    MODULE:      2,   // C
+    SUBJECT:     3,   // D
+    LESSON:      4,   // E
+    LAST_REVIEW: 5,   // F — USER INPUT
+    MASTERY:     6,   // G — USER INPUT
+    INTERVAL:    7,   // H — formula
+    NEXT_REVIEW: 8,   // I — formula
+    STATUS:      9,   // J — formula
+    PRIORITY:   10,   // K — formula
+    SYNCED:     11,   // L — script-managed
+    EVENT_ID:   12,   // M — script-managed (hidden column)
   },
 
   // Calendar
@@ -98,10 +99,11 @@ function syncToCalendar() {
     const row = data[i];
     const rowNum = i + CONFIG.HEADER_ROWS + 1;
 
-    const topic = row[CONFIG.COL.TOPIC];
+    const lesson = row[CONFIG.COL.LESSON];
     const subject = row[CONFIG.COL.SUBJECT];
     const module = row[CONFIG.COL.MODULE];
-    if (!topic || !subject) continue;
+    const semester = row[CONFIG.COL.SEMESTER];
+    if (!lesson || !module) continue;
 
     const nextReview = parseDate_(row[CONFIG.COL.NEXT_REVIEW]);
     const mastery = parseInt(row[CONFIG.COL.MASTERY]) || 0;
@@ -121,8 +123,8 @@ function syncToCalendar() {
         stats.deleted++;
       }
     } else if (hasValidDate && !isMastered) {
-      const title = buildTitle_(module, topic);
-      const desc = buildDescription_(subject, topic, mastery, lastReview, nextReview);
+      const title = buildTitle_(semester, module, lesson);
+      const desc = buildDescription_(semester, module, subject, lesson, mastery, lastReview, nextReview);
       const color = CONFIG.MASTERY_COLORS[Math.min(mastery, 5)];
 
       if (hasEvent) {
@@ -178,18 +180,21 @@ function syncToCalendar() {
 // CALENDAR OPERATIONS
 // ═══════════════════════════════════════════════════════════════
 
-function buildTitle_(module, topic) {
-  return CONFIG.CALENDAR_PREFIX + module + ' — ' + topic;
+function buildTitle_(semester, module, lesson) {
+  // Format: "📚 s3 - Sémiologie I | Diarrhée aiguë"
+  return CONFIG.CALENDAR_PREFIX + String(semester).toLowerCase() + ' - ' + module + ' | ' + lesson;
 }
 
-function buildDescription_(subject, topic, mastery, lastReview, nextReview) {
+function buildDescription_(semester, module, subject, lesson, mastery, lastReview, nextReview) {
   const stars = '⭐'.repeat(Math.min(mastery, 5)) + '☆'.repeat(Math.max(0, 5 - mastery));
   const lr = lastReview ? Utilities.formatDate(lastReview, Session.getScriptTimeZone(), 'yyyy-MM-dd') : 'never';
   return [
     `📚 Spaced Repetition Review`,
     ``,
-    `Subject: ${subject}`,
-    `Topic: ${topic}`,
+    `Semester: ${semester}`,
+    `Module: ${module}`,
+    subject ? `Subject: ${subject}` : null,
+    `Lesson: ${lesson}`,
     `Mastery: ${stars} (${mastery}/5)`,
     `Last reviewed: ${lr}`,
     ``,
@@ -197,8 +202,8 @@ function buildDescription_(subject, topic, mastery, lastReview, nextReview) {
     `  • Last Review → today's date (Ctrl+;)`,
     `  • Mastery → 0-5 based on recall`,
     ``,
-    `🔗 Auto-managed by Medical SRS v2`,
-  ].join('\n');
+    `🔗 Auto-managed by Medical SRS`,
+  ].filter(line => line !== null).join('\n');
 }
 
 function createEvent_(calendar, title, description, date, color) {
@@ -394,7 +399,7 @@ function showDailyDigest() {
   const lastRow = sheet.getLastRow();
   if (lastRow <= CONFIG.HEADER_ROWS) return;
 
-  const data = sheet.getRange(CONFIG.HEADER_ROWS + 1, 1, lastRow - CONFIG.HEADER_ROWS, 10).getValues();
+  const data = sheet.getRange(CONFIG.HEADER_ROWS + 1, 1, lastRow - CONFIG.HEADER_ROWS, CONFIG.COL.PRIORITY + 1).getValues();
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
@@ -408,7 +413,7 @@ function showDailyDigest() {
     if (!nextReview || mastery >= 5) continue;
 
     const diff = Math.floor((nextReview - today) / 86400000);
-    const item = `  • [M${mastery}] ${row[CONFIG.COL.MODULE]} — ${row[CONFIG.COL.TOPIC]}`;
+    const item = `  • [M${mastery}] ${row[CONFIG.COL.SEMESTER]} ${row[CONFIG.COL.MODULE]} | ${row[CONFIG.COL.LESSON]}`;
 
     if (diff < 0) overdue.push(item);
     else if (diff === 0) dueToday.push(item);
@@ -481,8 +486,8 @@ function onEditTrigger(e) {
   if (sheetName !== CONFIG.SHEET_NAME) return;
 
   const col = e.range.getColumn();
-  // Only sync on Last Review (E=5) or Mastery (F=6) edits
-  if (col === 5 || col === 6) {
+  // Only sync on Last Review or Mastery edits (1-based columns)
+  if (col === CONFIG.COL.LAST_REVIEW + 1 || col === CONFIG.COL.MASTERY + 1) {
     Utilities.sleep(1500);
     syncToCalendar();
   }
