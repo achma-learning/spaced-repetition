@@ -20,12 +20,14 @@ USAGE   (run from the repo root)
     (column H formula below) identical to the [1,3,7,14,30,60] array in the JS.
 """
 import re, os
+import datetime
 import openpyxl
 from openpyxl import Workbook
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from openpyxl.formatting.rule import ColorScaleRule, DataBarRule, FormulaRule
 from openpyxl.chart import BarChart, Reference
 from openpyxl.worksheet.datavalidation import DataValidation
+from openpyxl.workbook.defined_name import DefinedName
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(ROOT)
@@ -76,6 +78,7 @@ print(f'Parsed {len(rows)} lessons across {NMOD} module/semester pairs')
 
 # ── read existing progress so re-running never wipes study history ──
 progress = {}
+EXAM_DATE = datetime.date(2026, 5, 12)   # default; K1 of an existing workbook wins
 if os.path.exists(OUT):
     try:
         ex = openpyxl.load_workbook(OUT, data_only=False)['lesson-database']
@@ -85,6 +88,10 @@ if os.path.exists(OUT):
             if les and ((lr not in (None, '')) or (ma not in (None, ''))):
                 progress[(sem, mod, les)] = (lr, ma)
         print(f'Found existing progress for {len(progress)} lessons (will preserve)')
+        prev_exam = ex.cell(1, 11).value          # K1 = exam date (user-editable)
+        if isinstance(prev_exam, (datetime.date, datetime.datetime)):
+            EXAM_DATE = prev_exam
+            print(f'Preserving exam date from K1: {EXAM_DATE}')
     except Exception as e:
         print('Could not read existing progress:', e)
 
@@ -99,6 +106,12 @@ KPI_FILL = PatternFill('solid', fgColor='EAF1FB')
 thin = Side(style='thin', color='BFBFBF')
 BORDER = Border(left=thin, right=thin, top=thin, bottom=thin)
 CEN = Alignment(horizontal='center', vertical='center')
+
+# one soft fill per module (cycled) so each module block reads as one unit;
+# deliberately excludes DDEBF7 (the "edit here" blue on F/G)
+MODULE_COLORS = ['FDE9D9', 'E2EFDA', 'D9E1F2', 'FFF2CC', 'E4DFEC',
+                 'FCE4D6', 'DAEEF3', 'F2DCDB', 'EBF1DE', 'F2F2F2']
+MODULE_FILLS = [PatternFill('solid', fgColor=c) for c in MODULE_COLORS]
 
 def style_header(ws, row, ncols):
     for c in range(1, ncols + 1):
@@ -121,11 +134,28 @@ mv.sheet_properties.tabColor = 'ED7D31'
 HEADERS = ['#', 'Semester', 'Module', 'Subject', 'Lesson', 'Last Review',
            'Mastery', 'Interval', 'Next Review', 'Status', 'Priority',
            'Synced', 'Event ID']
-ldb.merge_cells('A1:M1')
-b = ldb['A1']
-b.value = ('🧠 MEDICAL SRS — edit only  ▸ F = Last Review (Ctrl+;)  ▸ G = Mastery 0–5. '
-           'Everything else is automatic. Click the ▼ arrows on row 2 to filter by Semester / Module / Subject.')
-b.fill = TITLE_FILL; b.font = WHITE; b.alignment = Alignment(horizontal='left', vertical='center')
+# row 1 = info strip: title · today · days left until exam · exam date (K1, editable)
+for c in range(1, len(HEADERS) + 1):
+    cell = ldb.cell(1, c)
+    cell.fill = TITLE_FILL; cell.font = WHITE
+    cell.alignment = Alignment(horizontal='left', vertical='center')
+ldb.merge_cells('A1:D1')
+ldb['A1'] = '🧠 MEDICAL SRS — type only F & G · ▼ filters on row 2'
+ldb['E1'] = '=TODAY()'
+ldb['E1'].number_format = '"📅 Today:  "dddd", "mmmm dd", "yyyy'
+ldb.merge_cells('F1:H1')
+ldb['F1'] = '=MAX(0,$K$1-TODAY())'
+ldb['F1'].number_format = '"⏳ Days left: "0" days available"'
+ldb.merge_cells('I1:J1')
+ldb['I1'] = '🎯 Exam date:'
+ldb['I1'].alignment = Alignment(horizontal='right', vertical='center')
+ldb.merge_cells('K1:L1')
+ek = ldb['K1']
+ek.value = EXAM_DATE
+ek.number_format = 'dd/mm/yyyy'
+ek.fill = INPUT_FILL
+ek.font = Font(bold=True, color='1F3864')
+ek.alignment = CEN; ek.border = BORDER
 ldb.row_dimensions[1].height = 26
 for c, hdr in enumerate(HEADERS, 1):
     ldb.cell(2, c, hdr)
@@ -135,10 +165,14 @@ for c in (6, 7):
 
 date_fmt = 'yyyy-mm-dd'
 last_data = H + len(rows)
+pair2idx = {p: i for i, p in enumerate(modpairs)}
 for i, (sem, mod, subj, lesson) in enumerate(rows):
     r = H + 1 + i
     ldb.cell(r, 1, '=ROW()-2').alignment = CEN
     ldb.cell(r, 2, sem); ldb.cell(r, 3, mod); ldb.cell(r, 4, subj); ldb.cell(r, 5, lesson)
+    mf = MODULE_FILLS[pair2idx[(sem, mod)] % len(MODULE_FILLS)]
+    for c in range(1, 6):                     # A–E share the module's color
+        ldb.cell(r, c).fill = mf
     ldb.cell(r, 6).number_format = date_fmt
     ldb.cell(r, 6).fill = INPUT_FILL
     ldb.cell(r, 7).fill = INPUT_FILL; ldb.cell(r, 7).alignment = CEN
@@ -284,7 +318,10 @@ mv.merge_cells('C3:F3')
 pick = mv['C3']; pick.value = f'{modpairs[0][0]} — {modpairs[0][1]}'
 pick.fill = PatternFill('solid', fgColor='FCE4D6'); pick.font = Font(bold=True, size=12)
 pick.alignment = CEN; pick.border = BORDER
-dvm = DataValidation(type='list', formula1=f'=Dashboard!$A${MHR+1}:$A${mod_last}', allow_blank=False, showErrorMessage=True)
+# Data-validation lists may not reference another sheet directly (Excel rejects
+# it and the dropdown shows nothing) — route through a workbook-level named range.
+wb.defined_names.add(DefinedName('ModuleList', attr_text=f'Dashboard!$A${MHR+1}:$A${mod_last}'))
+dvm = DataValidation(type='list', formula1='=ModuleList', allow_blank=False, showErrorMessage=True)
 dvm.prompt = 'Choose the module to inspect'; dvm.promptTitle = 'Module'
 mv.add_data_validation(dvm); dvm.add('C3')
 mv['N1'] = f'=IFERROR(INDEX(Dashboard!$B${MHR+1}:$B${mod_last},MATCH($C$3,Dashboard!$A${MHR+1}:$A${mod_last},0)),"")'
@@ -361,6 +398,8 @@ guide = [
     ('   • F  Last Review  → the day you studied it (press Ctrl+;  for today)', False),
     ('   • G  Mastery      → how well you recalled it, 0 (forgot) to 5 (mastered)', False),
     ('Everything else (interval, next review, status, priority) fills in by itself.', False),
+    ('Top bar (row 1): today + days left until the exam — set your exam date in the blue K1 cell.', False),
+    ('Rows are tinted per module (same color = same module) for easier scanning.', False),
     ('', False),
     ('HOW THE SCHEDULE WORKS', True),
     ('   Mastery 0→review in 1 day · 1→3d · 2→7d · 3→14d · 4→30d · 5→done (drops off).', False),
