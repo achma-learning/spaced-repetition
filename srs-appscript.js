@@ -1,22 +1,30 @@
 /**
  * ═══════════════════════════════════════════════════════════════
- * MEDICAL SRS v2 → GOOGLE CALENDAR SYNC
+ * MEDICAL SRS v3 → SHEETS SUPERPOWERS + GOOGLE CALENDAR SYNC
  * ═══════════════════════════════════════════════════════════════
- * 
- * WHAT'S NEW vs v1:
- * ✅ Graceful missed-day recovery (no panic pile-ups)
- * ✅ Daily workload cap (won't schedule 50 reviews on one day)
- * ✅ Smart rescheduling: overdue items spread across next 3 days
- * ✅ Color-coded calendar events by mastery level
- * ✅ Auto-status update (no manual status column needed)
- * ✅ Faster batch operations
- * ✅ Event descriptions show mastery + interval info
- * 
- * SETUP: Run setupTriggers() once → forget about it.
- * 
+ *
+ * v3 ADDS:
+ * ✅ Command Palette sidebar — fuzzy-search lessons / modules / commands,
+ *    log a review by pressing 0–5, filter any module in one keystroke
+ * ✅ Real module filtering (sets the sheet's filter for you)
+ * ✅ Daily progress snapshot → History sheet (feeds the Dashboard
+ *    "Progress over time" chart)
+ * ✅ Single INTERVALS constant (must mirror column H in the sheet)
+ * (v2 kept: graceful recovery, workload cap, smart reschedule,
+ *  color-coded events, auto-status, batch ops)
+ *
+ * SETUP (one time):
+ *   1. Run setupTriggers() → hourly sync + on-edit sync + daily snapshot.
+ *   2. Palette keyboard shortcut ("Ctrl+K", the Sheets way):
+ *      Extensions → Macros → Import macro → openCommandPalette,
+ *      then Extensions → Macros → Manage macros → assign it number 1.
+ *      Now  Ctrl+Alt+Shift+1  opens the palette. (Sheets reserves the real
+ *      Ctrl+K; inside the palette, Ctrl+K refocuses the search box.)
+ *
  * COLUMN MAP (0-indexed) — MUST match srs-system.xlsx exactly:
  *   A=# | B=Semester | C=Module | D=Subject | E=Lesson | F=Last Review
- *   G=Mastery | H=Interval | I=Next Review | J=Status | K=Priority | L=Synced | M=Event ID
+ *   G=Mastery | H=Interval | I=Next Review | J=Status | K=Priority
+ *   L=Synced | M=Event ID | (N=Notes — user-optional, script ignores it)
  */
 
 // ═══════════════════════════════════════════════════════════════
@@ -64,7 +72,15 @@ const CONFIG = {
 
   // Auto-sync interval
   AUTO_SYNC_HOURS: 1,
+
+  // Daily progress snapshot
+  HISTORY_SHEET: 'History',
+  SNAPSHOT_HOUR: 22,   // 22:00 local time
 };
+
+// Mastery → days until next review.
+// ⚠️ MUST stay identical to the column-H formula in srs-system.xlsx.
+const INTERVALS = [1, 3, 7, 14, 30, 60];
 
 // ═══════════════════════════════════════════════════════════════
 // MAIN SYNC
@@ -372,7 +388,7 @@ function smartReschedule() {
 
     // Directly set the next review date (override formula temporarily)
     // Better approach: set last_review = newDate - interval so formula calculates correctly
-    const interval = [1, 3, 7, 14, 30, 60][item.mastery] || 1;
+    const interval = INTERVALS[item.mastery] || 1;
     const fakeLastReview = new Date(newDate);
     fakeLastReview.setDate(fakeLastReview.getDate() - interval);
 
@@ -455,21 +471,31 @@ function setupTriggers() {
     .onEdit()
     .create();
 
+  ScriptApp.newTrigger('logDailySnapshot')
+    .timeBased()
+    .everyDays(1)
+    .atHour(CONFIG.SNAPSHOT_HOUR)
+    .create();
+
   SpreadsheetApp.getUi().alert(
     '✅ Auto-Sync Enabled!\n\n' +
     `• Syncs every ${CONFIG.AUTO_SYNC_HOURS}h automatically\n` +
     '• Syncs when you edit Last Review or Mastery\n' +
-    '• Calendar events are color-coded by mastery\n\n' +
+    '• Calendar events are color-coded by mastery\n' +
+    `• Daily progress snapshot at ${CONFIG.SNAPSHOT_HOUR}:00 → History sheet\n\n` +
+    '💡 Palette shortcut: Extensions → Macros → Import macro →\n' +
+    'openCommandPalette → assign number 1 → Ctrl+Alt+Shift+1.\n\n' +
     'Running first sync now...'
   );
 
   syncToCalendar();
+  logDailySnapshot();
 }
 
 function deleteTriggers_() {
   ScriptApp.getProjectTriggers().forEach(t => {
     const fn = t.getHandlerFunction();
-    if (['syncToCalendar', 'onEditTrigger'].includes(fn)) {
+    if (['syncToCalendar', 'onEditTrigger', 'logDailySnapshot'].includes(fn)) {
       ScriptApp.deleteTrigger(t);
     }
   });
@@ -498,17 +524,20 @@ function onEditTrigger(e) {
 // ═══════════════════════════════════════════════════════════════
 
 function onOpen() {
-  SpreadsheetApp.getUi().createMenu('📚 SRS v2')
+  SpreadsheetApp.getUi().createMenu('📚 SRS')
+    .addItem('🎛 Command Palette', 'openCommandPalette')
     .addItem('📋 Daily Digest', 'showDailyDigest')
     .addItem('🔄 Sync Calendar Now', 'syncToCalendar')
     .addSeparator()
     .addItem('🧠 Smart Reschedule (overdue)', 'smartReschedule')
+    .addItem('📸 Log Progress Snapshot', 'logDailySnapshot')
+    .addItem('🧹 Clear Module Filter', 'clearModuleFilter')
     .addSeparator()
     .addItem('⚙️ Setup Auto-Sync', 'setupTriggers')
     .addItem('🛑 Disable Auto-Sync', 'disableAutoSync')
     .addSeparator()
-    .addItem('🧹 Clear Sync Markers', 'clearSyncMarkers_')
-    .addItem('🗑️ Delete All SRS Events', 'deleteAllSRSEvents_')
+    .addItem('🧽 Clear Sync Markers', 'clearSyncMarkers')
+    .addItem('🗑️ Delete All SRS Events', 'deleteAllSRSEvents')
     .addToUi();
 }
 
@@ -516,7 +545,8 @@ function onOpen() {
 // MAINTENANCE
 // ═══════════════════════════════════════════════════════════════
 
-function clearSyncMarkers_() {
+// Note: menu items can't call underscore-"private" functions, hence no trailing _.
+function clearSyncMarkers() {
   const ui = SpreadsheetApp.getUi();
   if (ui.alert('Clear all sync markers?', 'Events in calendar will remain.\nNext sync recreates all.', ui.ButtonSet.YES_NO) !== ui.Button.YES) return;
 
@@ -530,7 +560,7 @@ function clearSyncMarkers_() {
   ui.alert('✅ Cleared.');
 }
 
-function deleteAllSRSEvents_() {
+function deleteAllSRSEvents() {
   const ui = SpreadsheetApp.getUi();
   if (ui.alert('Delete ALL SRS events from calendar?', 'Cannot be undone!', ui.ButtonSet.YES_NO) !== ui.Button.YES) return;
 
@@ -549,3 +579,253 @@ function deleteAllSRSEvents_() {
 
   ui.alert(`✅ Deleted ${count} SRS events.`);
 }
+
+// ═══════════════════════════════════════════════════════════════
+// COMMAND PALETTE  (the "Ctrl+K" of this system)
+// Open: 📚 SRS menu → Command Palette, or Ctrl+Alt+Shift+1 after the
+// one-time macro import described in the header.
+// ═══════════════════════════════════════════════════════════════
+
+function openCommandPalette() {
+  const html = HtmlService.createHtmlOutput(PALETTE_HTML_)
+    .setTitle('📚 SRS Command Palette');
+  SpreadsheetApp.getUi().showSidebar(html);
+}
+
+/** Everything the palette can search: commands, modules, all lessons. */
+function getPaletteData() {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const sheet = ss.getSheetByName(CONFIG.SHEET_NAME);
+  const lessons = [];
+  const moduleSeen = {};
+  const modules = [];
+  const lastRow = sheet ? sheet.getLastRow() : 0;
+  if (sheet && lastRow > CONFIG.HEADER_ROWS) {
+    const data = sheet.getRange(CONFIG.HEADER_ROWS + 1, 1,
+      lastRow - CONFIG.HEADER_ROWS, CONFIG.COL.PRIORITY + 1).getValues();
+    for (let i = 0; i < data.length; i++) {
+      const sem = data[i][CONFIG.COL.SEMESTER];
+      const mod = data[i][CONFIG.COL.MODULE];
+      const les = data[i][CONFIG.COL.LESSON];
+      if (!les || !mod) continue;
+      const mastery = data[i][CONFIG.COL.MASTERY];
+      lessons.push({
+        r: i + CONFIG.HEADER_ROWS + 1,
+        t: sem + ' · ' + mod + ' | ' + les,
+        m: (mastery === '' || mastery === null) ? null : Number(mastery),
+      });
+      const key = sem + ' — ' + mod;
+      if (!moduleSeen[key]) {
+        moduleSeen[key] = true;
+        modules.push({ label: key, sem: String(sem), mod: String(mod) });
+      }
+    }
+  }
+  const commands = [
+    { id: 'sync',        label: '🔄 Sync calendar now' },
+    { id: 'digest',      label: '📋 Daily digest' },
+    { id: 'reschedule',  label: '🧠 Smart reschedule overdue' },
+    { id: 'clearFilter', label: '🧹 Clear module filter' },
+    { id: 'today',       label: '⚡ Go to Today tab' },
+    { id: 'dashboard',   label: '📊 Go to Dashboard' },
+    { id: 'moduleView',  label: '🔍 Go to Module View' },
+    { id: 'database',    label: '🗂 Go to lesson-database' },
+    { id: 'snapshot',    label: '📸 Log progress snapshot now' },
+  ];
+  return { commands: commands, modules: modules, lessons: lessons };
+}
+
+function paletteCommand(id) {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const go = name => { const s = ss.getSheetByName(name); if (s) ss.setActiveSheet(s); return name; };
+  switch (id) {
+    case 'sync':        syncToCalendar();      return 'Calendar synced ✓';
+    case 'digest':      showDailyDigest();     return 'Digest opened';
+    case 'reschedule':  smartReschedule();     return 'Done';
+    case 'clearFilter': clearModuleFilter();   return 'Filters cleared ✓';
+    case 'today':       return go('Today');
+    case 'dashboard':   return go('Dashboard');
+    case 'moduleView':  return go('Module View');
+    case 'database':    return go(CONFIG.SHEET_NAME);
+    case 'snapshot':    logDailySnapshot();    return 'Snapshot logged ✓';
+  }
+  return 'Unknown command: ' + id;
+}
+
+/** Filter lesson-database to one module (sets the real sheet filter). */
+function filterModuleFromPalette(sem, mod) {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const sheet = ss.getSheetByName(CONFIG.SHEET_NAME);
+  const lastRow = Math.max(sheet.getLastRow(), CONFIG.HEADER_ROWS + 1);
+  let filter = sheet.getFilter();
+  if (!filter) {
+    filter = sheet.getRange(CONFIG.HEADER_ROWS, 1,
+      lastRow - CONFIG.HEADER_ROWS + 1, CONFIG.COL.PRIORITY + 1).createFilter();
+  }
+  filter.setColumnFilterCriteria(CONFIG.COL.SEMESTER + 1,
+    SpreadsheetApp.newFilterCriteria().whenTextEqualTo(sem).build());
+  filter.setColumnFilterCriteria(CONFIG.COL.MODULE + 1,
+    SpreadsheetApp.newFilterCriteria().whenTextEqualTo(mod).build());
+  // Mirror the choice in Module View's dropdown, then show the filtered list.
+  const mv = ss.getSheetByName('Module View');
+  if (mv) mv.getRange('C3').setValue(sem + ' — ' + mod);
+  ss.setActiveSheet(sheet);
+  sheet.setActiveSelection('A' + (CONFIG.HEADER_ROWS + 1));
+  return 'Filtered: ' + sem + ' — ' + mod;
+}
+
+function clearModuleFilter() {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(CONFIG.SHEET_NAME);
+  const f = sheet.getFilter();
+  if (f) {
+    f.setColumnFilterCriteria(CONFIG.COL.SEMESTER + 1, null);
+    f.setColumnFilterCriteria(CONFIG.COL.MODULE + 1, null);
+    f.setColumnFilterCriteria(CONFIG.COL.SUBJECT + 1, null);
+  }
+}
+
+/** One-keystroke review logging from the palette: F=today, G=mastery. */
+function reviewLessonFromPalette(row, mastery) {
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(CONFIG.SHEET_NAME);
+  row = parseInt(row, 10); mastery = parseInt(mastery, 10);
+  if (isNaN(row) || row <= CONFIG.HEADER_ROWS || row > sheet.getLastRow()) return '⚠️ Invalid row';
+  if (isNaN(mastery) || mastery < 0 || mastery > 5) return '⚠️ Mastery must be 0–5';
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  sheet.getRange(row, CONFIG.COL.LAST_REVIEW + 1).setValue(today);
+  sheet.getRange(row, CONFIG.COL.MASTERY + 1).setValue(mastery);
+  const les = sheet.getRange(row, CONFIG.COL.LESSON + 1).getValue();
+  // Calendar catches up on the hourly sync (or run Sync now from the palette).
+  return '✓ ' + les + ' → M' + mastery +
+    (mastery >= 5 ? ' · mastered 🎉' : ' · back in ' + INTERVALS[mastery] + 'd');
+}
+
+// ═══════════════════════════════════════════════════════════════
+// DAILY PROGRESS SNAPSHOT → History sheet (feeds Dashboard chart)
+// ═══════════════════════════════════════════════════════════════
+
+function logDailySnapshot() {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  let h = ss.getSheetByName(CONFIG.HISTORY_SHEET);
+  if (!h) {
+    h = ss.insertSheet(CONFIG.HISTORY_SHEET);
+    h.appendRow(['Date', 'Total', 'Started', 'Mastered', 'Overdue', 'Reviewed that day']);
+  }
+  const sheet = ss.getSheetByName(CONFIG.SHEET_NAME);
+  const lastRow = sheet.getLastRow();
+  const today = new Date(); today.setHours(0, 0, 0, 0);
+  let total = 0, started = 0, mastered = 0, overdue = 0, reviewedToday = 0;
+  if (lastRow > CONFIG.HEADER_ROWS) {
+    const data = sheet.getRange(CONFIG.HEADER_ROWS + 1, 1,
+      lastRow - CONFIG.HEADER_ROWS, CONFIG.COL.PRIORITY + 1).getValues();
+    for (const row of data) {
+      if (!row[CONFIG.COL.LESSON]) continue;
+      total++;
+      const lr = parseDate_(row[CONFIG.COL.LAST_REVIEW]);
+      const m = parseInt(row[CONFIG.COL.MASTERY], 10);
+      const mast = isNaN(m) ? null : m;
+      if (lr) started++;
+      if (mast !== null && mast >= 5) mastered++;
+      const nr = parseDate_(row[CONFIG.COL.NEXT_REVIEW]);
+      if (lr && nr && nr < today && (mast === null || mast < 5)) overdue++;
+      if (lr && lr.getTime() === today.getTime()) reviewedToday++;
+    }
+  }
+  // Upsert: overwrite today's row if it already exists (re-runs are safe).
+  const hLast = h.getLastRow();
+  let target = hLast + 1;
+  if (hLast >= 2) {
+    const lastDate = parseDate_(h.getRange(hLast, 1).getValue());
+    if (lastDate && lastDate.getTime() === today.getTime()) target = hLast;
+  }
+  h.getRange(target, 1, 1, 6).setValues([[today, total, started, mastered, overdue, reviewedToday]]);
+  h.getRange(target, 1).setNumberFormat('yyyy-mm-dd');
+  Logger.log('Snapshot: ' + [total, started, mastered, overdue, reviewedToday].join('/'));
+}
+
+// ═══════════════════════════════════════════════════════════════
+// PALETTE UI (HTML kept inline so setup stays "paste ONE file")
+// ═══════════════════════════════════════════════════════════════
+
+const PALETTE_HTML_ = `<!DOCTYPE html><html><head><base target="_top"><style>
+*{box-sizing:border-box;font-family:'Segoe UI',Roboto,Arial,sans-serif}
+body{margin:0;padding:10px;background:#1e1e2e;color:#eee}
+#q{width:100%;padding:10px;font-size:14px;border:1px solid #444;border-radius:8px;background:#2a2a3c;color:#fff;outline:none}
+#q:focus{border-color:#7aa2f7}
+.hint{color:#888;font-size:11px;margin:6px 2px}
+#list{margin-top:8px;max-height:72vh;overflow-y:auto}
+.item{padding:7px 9px;border-radius:6px;cursor:pointer;font-size:13px;line-height:1.35}
+.item.sel{background:#33415e}
+.meta{color:#9aa;font-size:11px}
+.badge{display:inline-block;min-width:16px;text-align:center;border-radius:4px;background:#444;font-size:11px;padding:1px 4px;margin-left:6px}
+.mast{display:none;margin-top:5px}
+.item.sel .mast{display:block}
+.mast button{margin:1px;padding:4px 10px;border:none;border-radius:5px;cursor:pointer;font-weight:bold;color:#fff}
+#toast{position:fixed;bottom:8px;left:10px;right:10px;background:#2e7d32;color:#fff;padding:8px;border-radius:6px;display:none;font-size:13px;z-index:9}
+</style></head><body>
+<input id="q" placeholder="Type a lesson, module or command…" autocomplete="off">
+<div class="hint">↑↓ move · Enter run · lesson: Enter then <b>0–5</b> logs today's review · Esc clear · Ctrl+K focus</div>
+<div id="list"></div><div id="toast"></div>
+<script>
+let DATA={commands:[],modules:[],lessons:[]},RES=[],SEL=0,ARMED=null;
+const q=document.getElementById('q'),list=document.getElementById('list'),toast=document.getElementById('toast');
+const COLORS=['#d9534f','#e8833a','#c9a91e','#9ac34a','#5cb85c','#8e6bbf'];
+function norm(s){return s.toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g,'')}
+function search(){
+  ARMED=null;
+  const t=norm(q.value.trim());
+  const hits=[];
+  const push=o=>{if(hits.length<60)hits.push(o)};
+  if(!t){
+    DATA.commands.forEach(c=>push({k:'c',o:c}));
+    DATA.modules.slice(0,12).forEach(m=>push({k:'m',o:m}));
+  }else{
+    const words=t.split(/\\s+/);
+    const match=s=>{const n=norm(s);return words.every(w=>n.includes(w))};
+    DATA.commands.forEach(c=>{if(match(c.label))push({k:'c',o:c})});
+    DATA.modules.forEach(m=>{if(match(m.label))push({k:'m',o:m})});
+    for(const l of DATA.lessons){if(hits.length>=60)break;if(match(l.t))push({k:'l',o:l});}
+  }
+  RES=hits;SEL=0;render();
+}
+function render(){
+  list.innerHTML='';
+  RES.forEach((h,i)=>{
+    const d=document.createElement('div');
+    d.className='item'+(i===SEL?' sel':'');
+    if(h.k==='c')d.innerHTML=h.o.label;
+    else if(h.k==='m')d.innerHTML='📂 '+h.o.label+' <span class="meta">filter this module</span>';
+    else d.innerHTML='📖 '+h.o.t+(h.o.m!==null?' <span class="badge">M'+h.o.m+'</span>':' <span class="badge">new</span>')+
+      '<div class="mast">'+[0,1,2,3,4,5].map(n=>'<button style="background:'+COLORS[n]+'" onclick="review('+h.o.r+','+n+');event.stopPropagation()">'+n+'</button>').join('')+'</div>';
+    d.onclick=()=>{SEL=i;render();run();};
+    list.appendChild(d);
+  });
+}
+function run(){
+  const h=RES[SEL];if(!h)return;
+  if(h.k==='c')gs('paletteCommand',h.o.id);
+  else if(h.k==='m')gs('filterModuleFromPalette',h.o.sem,h.o.mod);
+  else{ARMED=h.o.r;render();say('Press 0–5 → mastery for: '+h.o.t,'#555');}
+}
+function review(row,m){ARMED=null;gs('reviewLessonFromPalette',row,m);}
+function gs(fn){
+  const args=Array.prototype.slice.call(arguments,1);
+  say('⏳ working…','#555');
+  const runner=google.script.run
+    .withSuccessHandler(msg=>{say(msg||'Done ✓','#2e7d32');if(fn==='reviewLessonFromPalette')refresh();})
+    .withFailureHandler(e=>say('⚠️ '+e.message,'#b23b3b'));
+  runner[fn].apply(runner,args);
+}
+function say(t,bg){toast.textContent=t;toast.style.background=bg;toast.style.display='block';
+  clearTimeout(say.t);say.t=setTimeout(()=>toast.style.display='none',4000);}
+function refresh(){google.script.run.withSuccessHandler(d=>{DATA=d;search();}).getPaletteData();}
+q.addEventListener('input',search);
+document.addEventListener('keydown',e=>{
+  if(ARMED!==null&&/^[0-5]$/.test(e.key)){e.preventDefault();review(ARMED,+e.key);return;}
+  if(e.key==='ArrowDown'){SEL=Math.min(SEL+1,RES.length-1);render();e.preventDefault();}
+  else if(e.key==='ArrowUp'){SEL=Math.max(SEL-1,0);render();e.preventDefault();}
+  else if(e.key==='Enter'){run();e.preventDefault();}
+  else if(e.key==='Escape'){ARMED=null;q.value='';search();q.focus();}
+  else if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){q.focus();q.select();e.preventDefault();}
+});
+refresh();q.focus();
+</script></body></html>`;
