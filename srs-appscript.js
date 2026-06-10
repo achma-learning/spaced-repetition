@@ -49,7 +49,7 @@ const CONFIG = {
   SYNC_FUTURE_DAYS: 90,
 
   // Workload management
-  MAX_REVIEWS_PER_DAY: 15,   // Cap: don't schedule more than this per day
+  MAX_REVIEWS_PER_DAY: 8,    // Cap: don't schedule more than this per day
   SPREAD_OVERDUE_DAYS: 3,    // Spread overdue items across this many days
 
   // Mastery → color mapping for calendar events
